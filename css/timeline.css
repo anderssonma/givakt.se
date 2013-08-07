@@ -59,13 +59,13 @@
 	background: #4593E3;
 }
 .tweet.tweet-1 a, .tweet.tweet-1 span {
-	color: #226FBE;
+	color: #165494;
 }
 .tweet.tweet-2 {
-	background-color: #FCD04B;
+	background-color: #9E54BD;
 }
 .tweet.tweet-2 a, .tweet.tweet-2 span {
-	color: #DA9622;
+	color: #5E1B7B;
 }
 .tweet.tweet-3 {
 	background: #F06060;
@@ -104,7 +104,7 @@
 }
 .item p a {
 	color: rgba(0,0,0,0.4);
-	text-shadow: none;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.1);
 }
 
 .sticky {
