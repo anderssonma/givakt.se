@@ -1,5 +1,7 @@
 /*CUSTOMIZe*/
 
+/*GENERAL CHANGES */
+
 .orbit-bullets {
 	display: inline-block;
 }
@@ -11,7 +13,8 @@
 .padding {
 	position: relative;
 	width: 100%;
-	padding: 40px 0;
+	padding: 40px;
+	clear: both;
 }
 .margin-bottom-80 {
 	margin-bottom: 80px;
@@ -22,11 +25,51 @@
 	margin: 40px auto;
 	position: relative;
 }
+
+/*HEADER */
 .top-bar-section {
 	padding: 0;
 }
+.top-bar {
+	background: #fff;
+}
+.top-bar-section ul li > a {
+	background: #fff !important;
+	color: #333;
+}
+.contain-to-grid {
+	background: #fff;
+}
+.top-bar .name h1 a {
+	color: #333;
+}
+.top-bar.expanded .title-area {
+	background: #fff;
+}
+.top-bar .toggle-topbar.menu-icon a span {
+	-webkit-box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
+box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
+}
+.top-bar.expanded .toggle-topbar a {
+	color: #333;
+}
+.top-bar .toggle-topbar.menu-icon a {
+	color: #333;
+}
 .hero {
 	padding: 0;
+}
+
+.second-bkg {
+	background: #fafafa;
+}
+.horizontal-text {
+	display: table;
+	height: 100px;
+}
+.horizontal-text p {
+	display: table-cell;
+	vertical-align:middle;
 }
 section {
 	padding: 100px 0;
@@ -67,16 +110,7 @@ section {
 	width: 100%;
 }
 
-/* HOVER EFFEKT */
-
-/*.grid li {
-	display: inline-block;
-	width: 440px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	position: relative;
-}*/
+/* HOOVER */
 .grid {
 	margin: 0.9375em 0;
 }
