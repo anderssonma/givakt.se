@@ -1,5 +1,11 @@
 /*CUSTOMIZe*/
+<<<<<<< HEAD
 /* KOMMENTAR */
+=======
+/**/
+/*GENERAL CHANGES */
+
+>>>>>>> Hjelm
 .orbit-bullets {
 	display: inline-block;
 }
@@ -11,7 +17,8 @@
 .padding {
 	position: relative;
 	width: 100%;
-	padding: 40px 0;
+	padding: 40px;
+	clear: both;
 }
 .margin-bottom-80 {
 	margin-bottom: 80px;
@@ -22,16 +29,84 @@
 	margin: 40px auto;
 	position: relative;
 }
+
+/*HEADER */
 .top-bar-section {
 	padding: 0;
+	display: block;
+}
+.top-bar {
+	background: #fff;
+}
+.top-bar-section ul li > a {
+	background: #fff !important;
+	color: #333;
+}
+
+.contain-to-grid {
+	background: #fff;
+}
+.top-bar .name h1 a {
+	color: #333;
+}
+.top-bar.expanded .title-area {
+	background: #fff;
+}
+.top-bar .toggle-topbar.menu-icon a span {
+	-webkit-box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
+box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
+}
+.top-bar.expanded .toggle-topbar a {
+	color: #333;
+}
+.top-bar .toggle-topbar.menu-icon a {
+	color: #333;
 }
 .hero {
 	padding: 0;
+}
+
+.second-bkg {
+	background: #fafafa;
+}
+
+.large-left-bottom {
+	padding-left: 0;
+	padding-bottom: 0.9375em; 
+}
+.large-left-top {
+	padding-left: 0;
+}
+
+
+.horizontal-text {
+	display: table;
+	height: 100px;
+}
+.horizontal-text p {
+	display: table-cell;
+	vertical-align:middle;
 }
 section {
 	padding: 100px 0;
 	max-width: 1500px;
 	margin: 0 auto;
+	display: inline-block;
+	width: 100%;
+}
+.blogg-caption {
+	position: absolute;
+	bottom: 0;
+	background-color: #39ac8d;
+	width: 96.8%;
+	padding: 10px 14px;
+}
+.blogg-caption h4 {
+	color: #fff;
+	margin: 0;
+}
+.blogg-caption ul  {
+	margin-bottom: 0;
 }
 
 .utvalda-projekt .large-6 {
@@ -67,16 +142,7 @@ section {
 	width: 100%;
 }
 
-/* HOVER EFFEKT */
-
-/*.grid li {
-	display: inline-block;
-	width: 440px;
-	margin: 0;
-	padding: 20px;
-	text-align: left;
-	position: relative;
-}*/
+/* HOOVER */
 .grid {
 	margin: 0.9375em 0;
 }
