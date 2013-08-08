@@ -8,6 +8,7 @@ $(document).ready(function() {
       // Get the first then items from the grid, clone them, and add them to the bottom of the grid.
       var items = $('.timeline .item');
       $('.timeline').append(items.clone());
+      console.log(items);
       /*
       var itemSet = '.set-' + (Math.floor(Math.random() * 4) + 1) + ' .item';
       var items = $(itemSet);
