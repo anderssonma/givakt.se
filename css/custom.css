@@ -292,25 +292,25 @@ section {
 	background: url('../img/icon-twitter-alt.png') no-repeat 94% 94%;
 }
 .timeline-tweet.tweet-1 {
-	background-color: #4593E3;
+	background-color: #99B5BE;
 }
 .timeline-tweet.tweet-1 a,
 .timeline-tweet.tweet-1 span {
-	color: #165494;
+	color: #697B92;
 }
 .timeline-tweet.tweet-2 {
-	background-color: #9E54BD;
+	background-color: #6B6B6B;
 }
 .timeline-tweet.tweet-2 a,
 .timeline-tweet.tweet-2 span {
-	color: #5E1B7B;
+	color: #444;
 }
 .timeline-tweet.tweet-3 {
-	background-color: #F06060;
+	background-color: #EA7863;
 }
 .timeline-tweet.tweet-3 a, 
 .timeline-tweet.tweet-3 span {
-	color: #AB3C3C;
+	color: #B44F42;
 }
 
 .timeline-tweet p,
