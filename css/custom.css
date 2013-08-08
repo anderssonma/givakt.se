@@ -153,3 +153,164 @@ section {
 .cs-style-1 figcaption a {
 	margin-top: 30px;
 }
+
+/* TIMELINE CSS
+=============== */
+
+
+.item {
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	line-height: 1;
+	-webkit-animation: fadeIn 1s ease;
+}
+.item .watermark {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 60px;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(200px) scale(0.75);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0) scale(1);
+	}
+}
+
+.insta {
+	height: 300px;
+	background: #CCC;
+}
+
+.insta span {
+	position: absolute;
+	color: #FFF;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 12px;
+	background: rgba(0,0,0,0.6);
+	padding: 14px 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.tweet {
+	height: 300px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	background: url('../img/icon-twitter.png') no-repeat 94% 94%;
+	background-size: 40px 40px;
+}
+
+.tweet.tweet-1 {
+	background: #4593E3;
+}
+.tweet.tweet-1 a, .tweet.tweet-1 span {
+	color: #165494;
+}
+.tweet.tweet-2 {
+	background-color: #9E54BD;
+}
+.tweet.tweet-2 a, .tweet.tweet-2 span {
+	color: #5E1B7B;
+}
+.tweet.tweet-3 {
+	background: #F06060;
+}
+.tweet.tweet-3 a, .tweet.tweet-3 span {
+	color: #AB3C3C;
+}
+
+.hidden {
+	display: none;
+}
+
+.item p, .item h6 {
+	font-family: "Helvetica Neue",Arial,sans-serif;
+	font-size: 20px;
+	line-height: 26px;
+	color: #FFF;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 0  rgba(0,0,0,0.1);
+}
+.item p {
+	padding: 0 30px 30px;
+}
+.item h6 {
+	padding: 24px 30px 0;
+}
+.item h6 span {
+	font-size: 14px;
+	font-weight: normal;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+  margin-left: 2px;
+}
+.item p a {
+	color: rgba(0,0,0,0.4);
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.1);
+}
+
+
+.last-share {
+	margin-bottom: 30px;
+}
+.last-share p, .last-share h6 {
+ 	color: #333;
+ 	margin: 0 14px;
+ 	-webkit-font-smoothing: antialiased;
+}
+.last-share h6 {
+	font-size: 26px;
+	margin-bottom: 6px;
+	padding-top: 40px;
+}
+.last-share h6 span {
+	color: rgba(0,0,0,0.4);
+	font-weight: normal;
+	text-shadow: none;
+	font-size: 18px;
+}
+.last-share p {
+	font-size: 20px;
+	padding-bottom: 20px;
+	line-height: 26px;
+	border-bottom: 1px dashed #CCC;
+}
+.last-share p a {
+	color: rgba(0,0,0,0.4);
+}
+@media only screen and (min-width: 767px) { 
+	.item.insta img {
+		width: 100%;
+		min-height: 100%;
+	}
+	.item.insta img.watermark {
+		width: auto;
+		min-height: 60px;
+		height: 60px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.item.tweet {
+		height: auto;
+	}
+	.item.insta {
+		width: 100%;
+		height: auto;
+	}
+	.item.insta img {
+		width: 100%;
+	}
+	.item.insta img.watermark {
+		width: auto;
+	}
+	.tweet {
+		background-image: none;
+	}
+}
