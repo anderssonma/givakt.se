@@ -29,6 +29,7 @@
 /*HEADER */
 .top-bar-section {
 	padding: 0;
+	display: block;
 }
 .top-bar {
 	background: #fff;
@@ -37,6 +38,7 @@
 	background: #fff !important;
 	color: #333;
 }
+
 .contain-to-grid {
 	background: #fff;
 }
@@ -63,6 +65,16 @@ box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
 .second-bkg {
 	background: #fafafa;
 }
+
+.large-left-bottom {
+	padding-left: 0;
+	padding-bottom: 0.9375em; 
+}
+.large-left-top {
+	padding-left: 0;
+}
+
+
 .horizontal-text {
 	display: table;
 	height: 100px;
@@ -75,6 +87,8 @@ section {
 	padding: 100px 0;
 	max-width: 1500px;
 	margin: 0 auto;
+	display: inline-block;
+	width: 100%;
 }
 
 .utvalda-projekt .large-6 {
