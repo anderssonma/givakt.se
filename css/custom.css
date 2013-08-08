@@ -90,6 +90,20 @@ section {
 	display: inline-block;
 	width: 100%;
 }
+.blogg-caption {
+	position: absolute;
+	bottom: 0;
+	background-color: #39ac8d;
+	width: 96.8%;
+	padding: 10px 14px;
+}
+.blogg-caption h4 {
+	color: #fff;
+	margin: 0;
+}
+.blogg-caption ul  {
+	margin-bottom: 0;
+}
 
 .utvalda-projekt .large-6 {
 	padding: 0.9375em;
