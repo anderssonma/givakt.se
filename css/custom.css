@@ -29,8 +29,26 @@
 	margin: 40px auto;
 	position: relative;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+/*_______BUTTONS_____ */
+button, .button {
+	border-style: none;
+	border-width: 0;
+	font-weight: normal;
+}
+button, .button.black {
+	background-color: #3e3e3e;
+}
+button, .button.transparent {
+	background-color: transparent;
+	border: 2px #fff solid;
+}
 
-/*HEADER */
+
+/*_______HEADER______ */
+
 .top-bar-section {
 	padding: 0;
 	display: block;
@@ -74,6 +92,9 @@ box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
 	padding-left: 0;
 	padding-bottom: 0.9375em; 
 }
+.large-left-bottom .blogg-caption {
+	bottom: 14px;
+}
 .large-left-top {
 	padding-left: 0;
 }
@@ -87,12 +108,50 @@ box-shadow: 0 10px 0 1px #333, 0 16px 0 1px #333, 0 22px 0 1px #333;
 	display: table-cell;
 	vertical-align:middle;
 }
+.h-text-center {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 40%;
+	height: 100%;
+	left: 30%;
+	display: table;
+}
+.h-text-center-box {
+	border: none;
+	color: #fff !important;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.h-text-center-box h1 {
+	color: #fff;
+}
+
+.orbit-container .orbit-slides-container > * {
+	height: 100%;
+}
+
+
 section {
 	padding: 100px 0;
 	max-width: 1500px;
 	margin: 0 auto;
 	display: inline-block;
 	width: 100%;
+}
+
+/*_______competence_____*/
+.competence {
+	padding-bottom: 0;
+}
+/* ______BLOGG_______ */
+
+.blogg:hover .icon-stack{
+	opacity: 1;
+}
+.icon-stack {
+	opacity: .5
 }
 .blogg-caption {
 	position: absolute;
@@ -101,13 +160,22 @@ section {
 	width: 96.8%;
 	padding: 10px 14px;
 }
-.blogg-caption h4 {
+.blogg:nth-child(3) .blogg-caption {
+	background-color: #7aaaa7;
+}
+.blogg:nth-child(4) .blogg-caption {
+	background-color: #658f95;
+}
+.blogg-caption h4, .blogg-caption p, .blogg-caption .icon-stack {
 	color: #fff;
 	margin: 0;
 }
-.blogg-caption ul  {
+.blogg-caption ul, .blogg-caption p  {
 	margin-bottom: 0;
 }
+
+
+
 
 .utvalda-projekt .large-6 {
 	padding: 0.9375em;
