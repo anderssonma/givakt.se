@@ -7,6 +7,9 @@
 
 >>>>>>> Hjelm
 
+.orbit-bullets {
+	display: none;
+}
 .margin {
 	width: 100%;
 	position: relative;
