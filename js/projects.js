@@ -4,6 +4,7 @@ var pager = {
 	pageIn: '.project-page-1',
 	pageOut: '.project-page-2',
 	animEndCalls: 0,
+	direction: 'next',
 	animEnd: function() {
 		this.animEndCalls++;
 		if (this.animEndCalls >= 2 || this.pageInView === false) {
@@ -26,6 +27,12 @@ var nextPage = function() {
 
 	pager.isAnimating = true;
 
+	if (pager.direction !== 'next') {
+		$(pager.pageIn).removeClass('project-moveFromLeft project-moveToRight');
+		$(pager.pageOut).removeClass('project-moveFromLeft project-moveToRight');
+		pager.direction = 'next';
+	}
+
 	$(pager.pageIn).addClass('project-current project-moveFromRight').on('webkitAnimationEnd', function() {
 		$(pager.pageIn).off('webkitAnimationEnd');
 		$(pager.pageIn).removeClass('project-moveFromRight');
@@ -42,6 +49,50 @@ var nextPage = function() {
 
 }
 
+var prevPage = function() {
+
+	if (pager.isAnimating) {
+		return false;
+	}
+
+	pager.isAnimating = true;
+
+	if (pager.direction !== 'prev') {
+		$(pager.pageIn).removeClass('project-moveFromRight project-moveToLeft');
+		$(pager.pageOut).removeClass('project-moveFromRight project-moveToLeft');
+		pager.direction = 'prev';
+	}
+
+	$(pager.pageIn).addClass('project-current project-moveFromLeft').on('webkitAnimationEnd', function() {
+		$(pager.pageIn).off('webkitAnimationEnd');
+		$(pager.pageIn).removeClass('project-moveFromLeft');
+		pager.animEnd();
+	});
+
+	if (pager.pageInView) {
+		$(pager.pageOut).addClass('project-moveToRight').on('webkitAnimationEnd', function() {
+			$(pager.pageOut).off('webkitAnimationEnd');
+			$(pager.pageOut).removeClass('project-current project-moveToRight');
+			pager.animEnd();
+		});
+	}
+
+}
+
+var closePage = function() {
+
+	// TODO
+	// ====
+	// Pager breaks if you close it with esc, open it again, hit next/prev a couple of times
+
+	$(pager.pageOut).addClass('project-moveToRight').on('webkitAnimationEnd', function() {
+		$(pager.pageOut).off('webkitAnimationEnd');
+		$(pager.pageOut).removeClass('project-current project-moveToRight');
+		pager.animEnd();
+	});
+
+}
+
 $(document).ready(function() {
 
 	$('.project-thumb').on('click', function(e) {
@@ -53,6 +104,9 @@ $(document).ready(function() {
 			nextPage();
 		} else if (e.keyCode === 37) {
 			prevPage();
+		}
+		if (e.keyCode === 27) {
+			closePage();
 		}
 	});
 
