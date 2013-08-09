@@ -287,6 +287,71 @@ section {
 
 
 
+/* HUR VI JOBBAR */
+/* ============= */
+
+.work-process .large-4 {
+	height: 300px;
+}
+.work-blob {
+	background: #99B5BE;
+	position: relative;
+	width: 233px;
+	height: 233px;
+	margin: 0 auto;
+	border-radius: 117px;
+	-webkit-transition: 0.25s 0.25s all ease-out;
+}
+.work-blob:hover {
+	border-radius: 5px;
+	height: 300px;
+	width: 300px;
+	-webkit-transition: 0.25s all ease-out;
+}
+.work-blob img {
+	opacity: 1;
+	-webkit-transition: 0.25s 0.35s opacity ease-out;
+}
+.work-blob:hover img {
+	opacity: 0;
+	-webkit-transition: 0.25s opacity ease-in;
+}
+.work-blob h6 {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 24px;
+	margin-top: 10px;
+	color: rgba(0,0,0,0.5);
+	border-bottom: 1px solid rgba(255,255,255,0);
+	margin: 10 30px 0;
+	position: absolute;
+	top: 240px;
+	left: 50px;
+	right: 50px;
+	padding-bottom: 6px;
+	-webkit-transition: 0.25s 0.25s all ease-out;
+}
+.work-blob:hover h6 {
+	-webkit-transition: 0.25s all ease-out;
+	top: 20px;
+	border-bottom-color: rgba(255,255,255,0.4);
+}
+.work-blob p {
+	position: absolute;
+	color: #FFF;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+	top: 90px;
+	left: 30px;
+	right: 30px;
+	width: 240px;
+	opacity: 0;
+	-webkit-transition: opacity 0.25s ease-out;
+}
+.work-blob:hover p {
+	-webkit-transition: opacity 0.25s 0.15s ease-out;
+	opacity: 1;
+}
+
 /* TIMELINE CSS
 =============== */
 
