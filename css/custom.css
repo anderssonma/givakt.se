@@ -163,6 +163,30 @@ section {
 .blogg:hover .icon-stack{
 	opacity: 1;
 }
+.blogg {
+	overflow: hidden;
+}
+.blogg-grid .columns {
+	padding-bottom: 0.9375em;
+	padding-left: 0.9375em;
+	padding-right: 0;
+}
+.blogg-caption .columns {
+	padding-right: 0.9375em;
+	padding-left: 0.9375em;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+/*.older-post .columns:nth-child(even) {
+	padding: 0 0.46875em 0;
+}*/
+.blogg-grid {
+	padding-right: 0.9375em;
+	padding-left: 0;
+}
+.blogg-page {
+	padding-top: 0;
+}
 .circle {
 	border: 1px solid #fff;
 	border-radius: 1000px;
@@ -172,15 +196,15 @@ section {
 }
 .blogg-caption {
 	position: absolute;
-	bottom: 0;
-	background-color: #39ac8d;
-	width: 96.8%;
-	padding: 10px 14px;
+	bottom: 14px;
+	background-color: #67A292;
+	width: 100%;
+	padding: 6px 0 5px 0;
 }
-.blogg:nth-child(3) .blogg-caption {
+.blogg:nth-child(3n+1) .blogg-caption {
 	background-color: #7aaaa7;
 }
-.blogg:nth-child(4) .blogg-caption {
+.blogg:nth-child(even) .blogg-caption {
 	background-color: #658f95;
 }
 .blogg-caption h4, .blogg-caption p, .blogg-caption .icon-stack {
