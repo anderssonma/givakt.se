@@ -70,6 +70,9 @@ button, .button.transparent {
 	background: #fff !important;
 	color: #333;
 }
+.top-bar-section ul li.hover > a {
+	color: #999;
+}
 
 .contain-to-grid {
 	background: #fff;
