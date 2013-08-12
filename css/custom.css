@@ -4,7 +4,7 @@ body {
 }
 
 .orbit-bullets {
-	display: inline-block;
+	display: none;
 }
 .margin {
 	width: 100%;
@@ -29,18 +29,31 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
+.subheader {
+	margin-bottom: 2.5em;
+}
 /*_______BUTTONS_____ */
 button, .button {
 	border-style: none;
 	border-width: 0;
 	font-weight: normal;
+	webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 button, .button.black {
 	background-color: #3e3e3e;
+	border: 2px solid #3e3e3e;
 }
 button, .button.transparent {
 	background-color: transparent;
 	border: 2px #fff solid;
+}
+.button.transparent:hover {
+	background-color: #fff;
+	color: #3e3e3e;
 }
 
 
@@ -132,7 +145,6 @@ button, .button.transparent {
 
 section {
 	padding: 100px 0;
-	max-width: 1500px;
 	margin: 0 auto;
 	display: inline-block;
 	width: 100%;
@@ -147,20 +159,48 @@ section {
 .blogg:hover .icon-stack{
 	opacity: 1;
 }
+.blogg {
+	overflow: hidden;
+}
+.blogg-grid .columns {
+	padding-bottom: 0.9375em;
+	padding-left: 0.9375em;
+	padding-right: 0;
+}
+.blogg-caption .columns {
+	padding-right: 0.9375em;
+	padding-left: 0.9375em;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+/*.older-post .columns:nth-child(even) {
+	padding: 0 0.46875em 0;
+}*/
+.blogg-grid {
+	padding-right: 0.9375em;
+	padding-left: 0;
+}
+.blogg-page {
+	padding-top: 0;
+}
+.circle {
+	border: 1px solid #fff;
+	border-radius: 1000px;
+}
 .icon-stack {
 	opacity: .5
 }
 .blogg-caption {
 	position: absolute;
-	bottom: 0;
-	background-color: #39ac8d;
-	width: 96.8%;
-	padding: 10px 14px;
+	bottom: 14px;
+	background-color: #67A292;
+	width: 100%;
+	padding: 6px 0 5px 0;
 }
-.blogg:nth-child(3) .blogg-caption {
+.blogg:nth-child(3n+1) .blogg-caption {
 	background-color: #7aaaa7;
 }
-.blogg:nth-child(4) .blogg-caption {
+.blogg:nth-child(even) .blogg-caption {
 	background-color: #658f95;
 }
 .blogg-caption h4, .blogg-caption p, .blogg-caption .icon-stack {
@@ -551,11 +591,15 @@ section {
 		opacity: 1;
 		transform: translateY(0) scale(1);
 	}
+	/*______BLOGG_____*/
 	.blogg {
 		padding: 0 0 0.9375em 0;
 	}
 	.blogg-caption {
-		width: 100%;
+		width: 100%; 
+	}
+	.large-left-bottom .blogg-caption {
+		bottom: 0;
 	}
 }
 

@@ -3111,6 +3111,9 @@ form.custom {
       border-left-color: #ccc; }
 
 .orbit-bullets {
+/*just for now */
+  display: none;
+/*just for now */
   margin: 0 auto 30px auto;
   overflow: hidden;
   position: relative;
