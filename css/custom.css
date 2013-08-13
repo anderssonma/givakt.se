@@ -12,6 +12,10 @@ body.noscroll .contain-to-grid .top-bar {
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0adb0b4c3af26fc0eeffb7b8000f9b0870eabfd
 /*_____RESET _____*/
 .orbit-container .orbit-timer , .paused {
 	display: none !important;
@@ -577,16 +581,8 @@ section {
 	color: #B44F42;
 }
 
-<<<<<<< HEAD
 .timeline-tweet p,
 .timeline-tweet h6 {
-=======
-.hidden {
-	display: none;
-}
-
-.item p, .item h6 {
->>>>>>> en massa skit
 	font-size: 20px;
 	line-height: 26px;
 	color: #FFF;
