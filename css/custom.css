@@ -610,7 +610,38 @@ section {
 		bottom: 0;
 	}
 }
+.utvalda-projekt .large-6 {
+	padding: 0;
+}
+.project-thumb {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: -webkit-filter 0.25s;
+}
+.project-thumb:hover {
+	-webkit-filter: grayscale(75%);
+}
+.project-thumb .open-project {
+	display: block;
+	height: 80px;
+	width: 80px;
+	color: rgba(255,255,255,0.75);
+	background: rgba(0,0,0,0.75);
+	position: absolute;
+	top: -80px;
+	left: 50%;
+	line-height: 70px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	margin: -40px 0 0 -40px;
+	border-radius: 40px;
+	-webkit-transition: top 0.25s;
 
+}
+.project-thumb:hover .open-project {
+	top: 50%;
+}
 
 /* PAGE TRANSITIONS */
 /* ================ */

@@ -43,7 +43,7 @@ var prepareDiv = function() {
 
 var indexHandler = function() {
 	if (pager.direction === 'next') {
-		if (pager.index < 6) {
+		if (pager.index < 5) {
 			pager.index = pager.index + 1;
 		} else {
 			pager.index = 0;
@@ -52,7 +52,7 @@ var indexHandler = function() {
 		if (pager.index > 1) {
 			pager.index = pager.index - 1;
 		} else {
-			pager.index = 5;
+			pager.index = 4;
 		}
 	}
 };
@@ -99,7 +99,9 @@ var nextPage = function() {
 		pager.direction = 'next';
 	}
 
-	indexHandler();
+	if (pager.pageInView) {
+		indexHandler();
+	}
 	prepareDiv();
 
 	moveIn('project-moveFromRight');
@@ -124,7 +126,9 @@ var prevPage = function() {
 		pager.direction = 'prev';
 	}
 
-	indexHandler();
+	if (pager.pageInView) {
+		indexHandler();
+	}
 	prepareDiv();
 
 	moveIn('project-moveFromLeft');
@@ -143,6 +147,7 @@ var closePage = function() {
 $(document).ready(function() {
 
 	$('.project-thumb').on('click', function() {
+		pager.index = $(this).data('project-id');
 		$('.project-stage').addClass('active');
 		nextPage();
 	});
@@ -200,7 +205,7 @@ var projects = [
 		'title': 'Skånska Landskap',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-3-thumb.png',
-		'img': 'img/blogg3.png',
+		'img': 'img/blogg4.jpg',
 		'link': 'www.skanskalandskap.se'
 	},
 	{
@@ -209,7 +214,7 @@ var projects = [
 		'title': 'Purity Vodka',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-4-thumb.jpg',
-		'img': 'img/blogg4.jpg',
+		'img': 'img/blogg5.jpg',
 		'link': 'www.purityvodka.com'
 	},
 	{
@@ -218,7 +223,7 @@ var projects = [
 		'title': 'VASYD',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-5-thumb.jpg',
-		'img': 'img/blogg5.jpg',
+		'img': 'img/blogg6.jpg',
 		'link': 'www.vasyd.se'
 	},
 	{
@@ -227,17 +232,8 @@ var projects = [
 		'title': 'Malmö Live',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-6-thumb.jpg',
-		'img': 'img/blogg6.jpg',
-		'link': 'www.malmolive.se'
-	},
-	{
-		'tags': ['webb','kommunikation'],
-		'id': 0,
-		'title': 'Glasvasen',
-		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
-		'thumbnail': 'project-7-thumb.png',
 		'img': 'img/blogg7.jpg',
-		'link': 'www.glasvasen.se'
+		'link': 'www.malmolive.se'
 	}
 ];
 
