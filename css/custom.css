@@ -7,6 +7,9 @@ body.noscroll {
 	overflow-y: hidden;
 	overflow-x: hidden;
 }
+body.noscroll .contain-to-grid .top-bar {
+	padding-right: 7px;
+}
 
 .orbit-bullets {
 	display: none;
