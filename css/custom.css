@@ -614,18 +614,75 @@ section {
 
 /* PAGE TRANSITIONS */
 /* ================ */
-
-.project-page {
-	background: #FFF;
+.project-stage {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+.project-stage.active {
+	display: block;
+}
+
+.project-controls {
+	z-index: 10;
+	position: relative;
+	opacity: 0;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+.project-controls.active {
+	opacity: 1;
+}
+
+.project-controls .nav-project {
+	position: fixed;
+	left: 50px;
+	top: 50%;
+	display: block;
+	height: 40px;
+	width: 40px;
+	font-size: 30px;
+	line-height: 35px;
+	background: rgba(0,0,0,0.25);
+	z-index: 10;
+	color: #FFF;
+	text-align: center;
+}
+
+.project-controls .next-project {
+	left: auto;
+	right: 50px;
+}
+
+.project-controls .exit-project {
+	top: 50px;
+	line-height: 32px;
+}
+
+.project-controls .exit-project i {
+	-webkit-transform: rotate(45deg);
+	display: inline-block;
+	text-indent: 7px;
+}
+
+.project-page {
+	background: #FFF;
 	visibility: hidden;
 	overflow: hidden;
-	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -638,7 +695,7 @@ section {
 }
 
 .project-page.scroll {
-	overflow-y: scroll;
+	/* overflow-y: auto; */
 }
 
 .project-current,
