@@ -11,6 +11,46 @@ body.noscroll .contain-to-grid .top-bar {
 	padding-right: 7px;
 }
 
+
+/*_____RESET _____*/
+.orbit-container .orbit-timer , .paused {
+	display: none !important;
+}
+.orbit-container .orbit-timer .orbit-progress {
+	display: none;
+}
+.orbit-container .orbit-slide-number {
+	display: none;
+}
+.orbit-prev, .orbit-next {
+	display: none;
+}
+.orbit-container {
+	background: #fff;
+}
+p {
+	font-family: 'proxima_nova_rgregular';
+}
+h1 {
+	font-size: 4em;
+}
+.f-large {
+	font-size: 7.8em;
+	line-height: 1em;
+	margin: 0
+}
+.f-medium {
+	font-size: 6em;
+	margin-bottom: 0;
+	line-height: 1em;
+}
+.f-light {
+	font-family: 'proxima_nova_ththin' !important;	
+}
+.text-block {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 .orbit-bullets {
 	display: none;
 }
@@ -35,7 +75,7 @@ body.noscroll .contain-to-grid .top-bar {
 	position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+
 }
 .subheader {
 	margin-bottom: 2.5em;
@@ -145,7 +185,7 @@ button, .button.transparent {
 	vertical-align: middle;
 	text-align: center;
 }
-.h-text-center-box h1 {
+.h-text-center-box h1,.h-text-center-box h2 {
 	color: #fff;
 }
 
@@ -159,6 +199,22 @@ section {
 	margin: 0 auto;
 	display: inline-block;
 	width: 100%;
+}
+
+/*_______ABOUT US_____*/
+
+.about-us-top {
+	position: relative;
+}
+.about-us-page {
+	padding-top: 0;
+}
+.about-us-page .orbit-bullets{
+	display: inline-block;
+}
+.about-us-top .h-text-center {
+	width: 60%;
+	left: 20%;
 }
 
 /*_______competence_____*/
@@ -194,6 +250,13 @@ section {
 .blogg-page {
 	padding-top: 0;
 }
+.blogg-page .inline-list {
+	display: inline-block;
+}
+.blogg-top-img img{
+	width: 100%;
+	height: auto;
+}
 .circle {
 	border: 1px solid #fff;
 	border-radius: 1000px;
@@ -208,6 +271,17 @@ section {
 	width: 100%;
 	padding: 6px 0 5px 0;
 }
+.blogg-caption ul {
+	margin-top: .7em;
+}
+.blogg-caption ul li:first-child h4 {
+	font-size: 2.6em;
+	line-height: .6em;
+	margin-top: 0;
+}
+.blogg-caption ul li h4 {
+	font-size: 1.3em;
+}
 .blogg:nth-child(3n+1) .blogg-caption {
 	background-color: #7aaaa7;
 }
@@ -221,7 +295,13 @@ section {
 .blogg-caption ul, .blogg-caption p  {
 	margin-bottom: 0;
 }
-
+.blogg-caption h3 {
+	line-height: 1.2em;
+	margin-bottom: 0;
+	color: #fff;
+	font-size: 1.4375em;
+	margin-top: .3em;
+}
 
 
 
@@ -497,8 +577,16 @@ section {
 	color: #B44F42;
 }
 
+<<<<<<< HEAD
 .timeline-tweet p,
 .timeline-tweet h6 {
+=======
+.hidden {
+	display: none;
+}
+
+.item p, .item h6 {
+>>>>>>> en massa skit
 	font-size: 20px;
 	line-height: 26px;
 	color: #FFF;
