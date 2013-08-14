@@ -21,7 +21,7 @@ var pager = {
 		this.isAnimating = false;
 		this.pageInView = false;
 		this.pageIn = '.project-page-1';
-		this.pageOut = '.project-page-2';
+		this.pageOut =  '.project-page-2';
 		this.direction = 'next';
 		this.index = 0;
 		this.projectsCount = 6;
@@ -92,9 +92,31 @@ var indexHandler = function() {
 	} else {
 		pager.index = (pager.index - 1) % pager.projectsCount;
 	}
-	console.log(pager.index);
 };
 
+var preparePages = function(direction) {
+	if (pager.isAnimating) {
+		return false;
+	}
+	pager.isAnimating = true;
+	$(pager.pageOut).removeClass('scroll');
+
+	if (direction === 'next' && pager.direction !== 'next') {
+		$(pager.pageIn).removeClass('project-moveFromLeft project-moveToRight');
+		$(pager.pageOut).removeClass('project-moveFromLeft project-moveToRight');
+		pager.direction = 'next';
+	} else if (direction === 'prev' && pager.direction !== 'prev') {
+		$(pager.pageIn).removeClass('project-moveFromRight project-moveToLeft');
+		$(pager.pageOut).removeClass('project-moveFromRight project-moveToLeft');
+		pager.direction = 'prev';
+	}
+
+	if (pager.pageInView) {
+		indexHandler();
+	}
+	console.time('Load images');
+	preloadImages(projects[pager.index].imgs, prepareDiv);
+};
 
 var moveIn = function(inClass) {
 	$(pager.pageIn).addClass('project-current ' + inClass).on('webkitAnimationEnd', function() {
@@ -125,49 +147,6 @@ var moveOut = function(outClass, isTimeToExit) {
 	}
 };
 
-
-var nextPage = function() {
-	if (pager.isAnimating) {
-		return false;
-	}
-	pager.isAnimating = true;
-	$(pager.pageOut).removeClass('scroll');
-
-	if (pager.direction !== 'next') {
-		$(pager.pageIn).removeClass('project-moveFromLeft project-moveToRight');
-		$(pager.pageOut).removeClass('project-moveFromLeft project-moveToRight');
-		pager.direction = 'next';
-	}
-
-	if (pager.pageInView) {
-		indexHandler();
-	}
-	console.time('Load images');
-	preloadImages(projects[pager.index].imgs, prepareDiv);
-};
-
-
-var prevPage = function() {
-	if (pager.isAnimating) {
-		return false;
-	}
-	pager.isAnimating = true;
-	$(pager.pageOut).removeClass('scroll');
-
-	if (pager.direction !== 'prev') {
-		$(pager.pageIn).removeClass('project-moveFromRight project-moveToLeft');
-		$(pager.pageOut).removeClass('project-moveFromRight project-moveToLeft');
-		pager.direction = 'prev';
-	}
-
-	if (pager.pageInView) {
-		indexHandler();
-	}
-	console.time('Load images');
-	preloadImages(projects[pager.index].imgs, prepareDiv);
-};
-
-
 var closePage = function() {
 	$('body').removeClass('noscroll');
 	moveOut('project-moveToRight', true);
@@ -181,14 +160,14 @@ $(document).ready(function() {
 	$('.project-thumb').on('click', function() {
 		pager.index = $(this).data('project-id');
 		$('.project-stage').addClass('active');
-		nextPage();
+		preparePages('next');
 	});
 
 	$('.project-stage span').on('click', function() {
 		if ($(this).hasClass('next-project')) {
-			nextPage();
+			preparePages('next');
 		} else if ($(this).hasClass('prev-project')) {
-			prevPage();
+			preparePages('prev');
 		} else if ($(this).hasClass('exit-project')) {
 			closePage();
 		}
@@ -198,10 +177,10 @@ $(document).ready(function() {
 		if (pager.pageInView) {
 			switch (e.keyCode) {
 				case 39:
-					nextPage();
+					preparePages('next');
 					break;
 				case 37:
-					prevPage();
+					preparePages('prev');
 					break;
 				case 27:
 					closePage();
