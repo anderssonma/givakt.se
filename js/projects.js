@@ -71,14 +71,20 @@ var preloadImages = function(imgArr, callback) {
 	var all = imgArr.length,
 			remaining = all,
 			progressbar = $('.progress-bar'),
-			img;
+			img, fx;
 
 	var finish = function() {
 		remaining = remaining - 1;
-		var loadPercent = parseInt(((all - remaining )* 100 / all), 10);
-		progressbar.css('width', loadPercent + '%');
+		window.clearTimeout(fx);
+		fx = window.setTimeout(function() {
+			var loadPercent = parseInt(((all - remaining )* 100 / all), 10);
+			progressbar.css('width', loadPercent + '%');
+		}, 50);
 		if (remaining <= 0) {
 			callback();
+			if (parseInt(progressbar.css('width'), 10) <= 0) {
+				window.clearTimeout(fx);
+			}
 			window.setTimeout(function() {
 				progressbar.css('width', '0%');
 				progressbar.css('display', 'none');
