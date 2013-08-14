@@ -796,6 +796,7 @@ section {
 	height: 4px;
 	background: #EA7863;
 	z-index: 20;
+	border-radius: 0 1px 1px 0;
 	-webkit-transition: width 0.1s ease-in;
 	-moz-transition: width 0.1s ease-in;
 	-o-transition: width 0.1s ease-in;
@@ -824,6 +825,7 @@ section {
 	display: block;
 	height: 40px;
 	width: 40px;
+	border-radius: 20px;
 	font-size: 26px;
 	line-height: 36px;
 	font-weight: bold;

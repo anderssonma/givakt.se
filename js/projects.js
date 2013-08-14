@@ -134,6 +134,7 @@ var preparePages = function(direction) {
 		indexHandler();
 	}
 	console.time('Load images');
+	pager.controls.removeClass('active');
 	preloadImages(projects[pager.index].imgs, prepareDiv);
 };
 
@@ -141,9 +142,7 @@ var preparePages = function(direction) {
 var moveIn = function(inClass) {
 	pager.pageIn.addClass('project-current ' + inClass).on(pager.animEndName, function() {
 		$('body').addClass('noscroll');
-		if (!pager.pageInView) {
-			pager.controls.addClass('active');
-		}
+		pager.controls.addClass('active');
 		pager.pageIn.addClass('scroll');
 		pager.pageIn.off(pager.animEndName);
 		pager.pageIn.removeClass(inClass);
