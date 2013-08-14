@@ -6,32 +6,31 @@
 // ====
 
 var pager = {
-	isAnimating: false,
-	pageInView: false,
-	pageIn: '.project-page-1',
-	pageOut: '.project-page-2',
-	index: 0,
-	animEndCalls: 0,
-	oldBodyTop: 0,
-	direction: 'next',
 	animEnd: function() {
 		this.animEndCalls++;
 		if (this.animEndCalls >= 2 || this.pageInView === false) {
-			var cache = this.pageIn;
+			var temp = this.pageIn;
 			this.pageIn = this.pageOut;
-			this.pageOut = cache;
+			this.pageOut = temp;
 			this.isAnimating = false;
 			this.pageInView = true;
 			this.animEndCalls = 0;
 		}
 	},
-	reset: function() {
+	setDefaults: function() {
 		this.isAnimating = false;
 		this.pageInView = false;
+		this.pageIn = '.project-page-1';
+		this.pageOut = '.project-page-2';
 		this.direction = 'next';
 		this.index = 0;
+		this.projectsCount = 6;
 		this.animEndCalls = 0;
 		this.oldBodyTop = 0;
+	},
+	init: function() {
+		this.setDefaults();
+		console.log(pager);
 	}
 };
 
@@ -57,43 +56,45 @@ var prepareDiv = function() {
 	}
 };
 
+
 var preloadImages = function(imgArr, callback) {
-	var img;
-	var remaining = imgArr.length;
-	$('.progress-bar').css('display', 'block');
+	console.log(imgArr);
+	var all = imgArr.length,
+			remaining = all,
+			progressbar = $('.progress-bar'),
+			img;
+
+	var finish = function() {
+		remaining = remaining - 1;
+		var loadPercent = parseInt(((all - remaining )* 100 / all), 10);
+		progressbar.css('width', loadPercent + '%');
+		if (remaining <= 0) {
+			callback();
+			window.setTimeout(function() {
+				progressbar.css('width', '0%');
+				progressbar.css('display', 'none');
+			}, 200);
+		}
+	};
+
+	progressbar.css('display', 'block');
 	for (var i = 0; i < imgArr.length; i++) {
 		img = new Image();
-		img.onload = function() {
-			--remaining;
-			var loadPercent = parseInt((imgArr.length - remaining )* 100 / imgArr.length);
-			$('.progress-bar').css('width', loadPercent + '%');
-			if (remaining <= 0) {
-				callback();
-				window.setTimeout(function() {
-					$('.progress-bar').css('width', '0%');
-					$('.progress-bar').css('display', 'none');
-				}, 200);
-			}
-		};
+		img.onload = finish;
 		img.src = imgArr[i];
 	}
 };
 
+
 var indexHandler = function() {
 	if (pager.direction === 'next') {
-		if (pager.index < 5) {
-			pager.index = pager.index + 1;
-		} else {
-			pager.index = 0;
-		}
+		pager.index = (pager.index + 1) % pager.projectsCount;
 	} else {
-		if (pager.index > 1) {
-			pager.index = pager.index - 1;
-		} else {
-			pager.index = 4;
-		}
+		pager.index = (pager.index - 1) % pager.projectsCount;
 	}
+	console.log(pager.index);
 };
+
 
 var moveIn = function(inClass) {
 	$(pager.pageIn).addClass('project-current ' + inClass).on('webkitAnimationEnd', function() {
@@ -108,6 +109,7 @@ var moveIn = function(inClass) {
 	});
 };
 
+
 var moveOut = function(outClass, isTimeToExit) {
 	$(pager.pageOut).addClass(outClass).on('webkitAnimationEnd', function() {
 		$(pager.pageOut).off('webkitAnimationEnd');
@@ -115,7 +117,7 @@ var moveOut = function(outClass, isTimeToExit) {
 		pager.animEnd();
 		if (isTimeToExit) {
 			$('.project-stage').removeClass('active');
-			pager.reset();
+			pager.setDefaults();
 		}
 	});
 	if (isTimeToExit) {
@@ -123,8 +125,8 @@ var moveOut = function(outClass, isTimeToExit) {
 	}
 };
 
-var nextPage = function() {
 
+var nextPage = function() {
 	if (pager.isAnimating) {
 		return false;
 	}
@@ -142,11 +144,10 @@ var nextPage = function() {
 	}
 	console.time('Load images');
 	preloadImages(projects[pager.index].imgs, prepareDiv);
-
 };
 
-var prevPage = function() {
 
+var prevPage = function() {
 	if (pager.isAnimating) {
 		return false;
 	}
@@ -164,15 +165,18 @@ var prevPage = function() {
 	}
 	console.time('Load images');
 	preloadImages(projects[pager.index].imgs, prepareDiv);
-
 };
+
 
 var closePage = function() {
 	$('body').removeClass('noscroll');
 	moveOut('project-moveToRight', true);
 };
 
+
 $(document).ready(function() {
+
+	pager.init();
 
 	$('.project-thumb').on('click', function() {
 		pager.index = $(this).data('project-id');
