@@ -5,6 +5,13 @@
 // TODO
 // ====
 
+var animEndEventNames = {
+	'WebkitAnimation' : 'webkitAnimationEnd',
+	'OAnimation' : 'oAnimationEnd',
+	'msAnimation' : 'MSAnimationEnd',
+	'animation' : 'animationend'
+};
+
 var pager = {
 	animEnd: function() {
 		this.animEndCalls++;
@@ -19,9 +26,12 @@ var pager = {
 	},
 	setDefaults: function() {
 		this.isAnimating = false;
+		this.animEndName = animEndEventNames[Modernizr.prefixed('animation')];
 		this.pageInView = false;
-		this.pageIn = '.project-page-1';
-		this.pageOut =  '.project-page-2';
+		this.pageIn = $('.project-page-1');
+		this.pageOut =  $('.project-page-2');
+		this.controls = $('.project-controls');
+		this.stage = $('.project-stage');
 		this.direction = 'next';
 		this.index = 0;
 		this.projectsCount = 6;
@@ -30,17 +40,17 @@ var pager = {
 	},
 	init: function() {
 		this.setDefaults();
-		console.log(pager);
 	}
 };
 
 var prepareDiv = function() {
 	// PRELOAD IMAGES HERE
 	console.timeEnd('Load images');
-	$(pager.pageIn + ' h1').text(projects[pager.index].title);
-	$(pager.pageIn + ' p').text(projects[pager.index].desc);
+	var wrapper = pager.pageIn.selector;
+	$(wrapper + ' h1').text(projects[pager.index].title);
+	$(wrapper + ' p').text(projects[pager.index].desc);
 	for (var i = 0; i < projects[pager.index].imgs.length; i++) {
-		$(pager.pageIn + ' .img-' + i).attr('src', projects[pager.index].imgs[i]);
+		$(wrapper + ' .img-' + i).attr('src', projects[pager.index].imgs[i]);
 	}
 
 	if (pager.direction === 'next') {
@@ -58,7 +68,6 @@ var prepareDiv = function() {
 
 
 var preloadImages = function(imgArr, callback) {
-	console.log(imgArr);
 	var all = imgArr.length,
 			remaining = all,
 			progressbar = $('.progress-bar'),
@@ -90,24 +99,28 @@ var indexHandler = function() {
 	if (pager.direction === 'next') {
 		pager.index = (pager.index + 1) % pager.projectsCount;
 	} else {
-		pager.index = (pager.index - 1) % pager.projectsCount;
+		pager.index = (pager.index - 1);
+		if (pager.index < 0) {
+			pager.index = pager.projectsCount - 1;
+		}
 	}
 };
+
 
 var preparePages = function(direction) {
 	if (pager.isAnimating) {
 		return false;
 	}
 	pager.isAnimating = true;
-	$(pager.pageOut).removeClass('scroll');
+	pager.pageOut.removeClass('scroll');
 
 	if (direction === 'next' && pager.direction !== 'next') {
-		$(pager.pageIn).removeClass('project-moveFromLeft project-moveToRight');
-		$(pager.pageOut).removeClass('project-moveFromLeft project-moveToRight');
+		pager.pageIn.removeClass('project-moveFromLeft project-moveToRight');
+		pager.pageOut.removeClass('project-moveFromLeft project-moveToRight');
 		pager.direction = 'next';
 	} else if (direction === 'prev' && pager.direction !== 'prev') {
-		$(pager.pageIn).removeClass('project-moveFromRight project-moveToLeft');
-		$(pager.pageOut).removeClass('project-moveFromRight project-moveToLeft');
+		pager.pageIn.removeClass('project-moveFromRight project-moveToLeft');
+		pager.pageOut.removeClass('project-moveFromRight project-moveToLeft');
 		pager.direction = 'prev';
 	}
 
@@ -118,34 +131,36 @@ var preparePages = function(direction) {
 	preloadImages(projects[pager.index].imgs, prepareDiv);
 };
 
+
 var moveIn = function(inClass) {
-	$(pager.pageIn).addClass('project-current ' + inClass).on('webkitAnimationEnd', function() {
+	pager.pageIn.addClass('project-current ' + inClass).on(pager.animEndName, function() {
 		$('body').addClass('noscroll');
 		if (!pager.pageInView) {
-			$('.project-controls').addClass('active');
+			pager.controls.addClass('active');
 		}
-		$(pager.pageIn).addClass('scroll');
-		$(pager.pageIn).off('webkitAnimationEnd');
-		$(pager.pageIn).removeClass(inClass);
+		pager.pageIn.addClass('scroll');
+		pager.pageIn.off(pager.animEndName);
+		pager.pageIn.removeClass(inClass);
 		pager.animEnd();
 	});
 };
 
 
 var moveOut = function(outClass, isTimeToExit) {
-	$(pager.pageOut).addClass(outClass).on('webkitAnimationEnd', function() {
-		$(pager.pageOut).off('webkitAnimationEnd');
-		$(pager.pageOut).removeClass('project-current ' + outClass);
+	pager.pageOut.addClass(outClass).on(pager.animEndName, function() {
+		pager.pageOut.off(pager.animEndName);
+		pager.pageOut.removeClass('project-current ' + outClass);
 		pager.animEnd();
 		if (isTimeToExit) {
-			$('.project-stage').removeClass('active');
+			pager.stage.removeClass('active');
 			pager.setDefaults();
 		}
 	});
 	if (isTimeToExit) {
-		$('.project-controls').removeClass('active');
+		pager.controls.removeClass('active');
 	}
 };
+
 
 var closePage = function() {
 	$('body').removeClass('noscroll');
@@ -159,11 +174,11 @@ $(document).ready(function() {
 
 	$('.project-thumb').on('click', function() {
 		pager.index = $(this).data('project-id');
-		$('.project-stage').addClass('active');
+		pager.stage.addClass('active');
 		preparePages('next');
 	});
 
-	$('.project-stage span').on('click', function() {
+	$(pager.stage.selector + ' span').on('click', function() {
 		if ($(this).hasClass('next-project')) {
 			preparePages('next');
 		} else if ($(this).hasClass('prev-project')) {
@@ -190,6 +205,7 @@ $(document).ready(function() {
 	});
 
 });
+
 
 var projects = [
 	{
