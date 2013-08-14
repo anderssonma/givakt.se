@@ -36,9 +36,40 @@ var pager = {
 };
 
 var prepareDiv = function() {
+	// PRELOAD IMAGES HERE
+	console.timeEnd('Load images');
 	$(pager.pageIn + ' h1').text(projects[pager.index].title);
 	$(pager.pageIn + ' p').text(projects[pager.index].desc);
-	$(pager.pageIn + ' img').attr('src', projects[pager.index].img);
+	for (var i = 0; i < projects[pager.index].imgs.length; i++) {
+		$(pager.pageIn + ' .img-' + i).attr('src', projects[pager.index].imgs[i]);
+	}
+
+	if (pager.direction === 'next') {
+		moveIn('project-moveFromRight');
+		if (pager.pageInView) {
+			moveOut('project-moveToLeft');
+		}
+	} else {
+		moveIn('project-moveFromLeft');
+		if (pager.pageInView) {
+			moveOut('project-moveToRight');
+		}
+	}
+};
+
+var preloadImages = function(imgArr, callback) {
+	var img;
+	var remaining = imgArr.length;
+	for (var i = 0; i < imgArr.length; i++) {
+		img = new Image();
+		img.onload = function() {
+			--remaining;
+			if (remaining <= 0) {
+				callback();
+			}
+		};
+		img.src = imgArr[i];
+	}
 };
 
 var indexHandler = function() {
@@ -102,13 +133,8 @@ var nextPage = function() {
 	if (pager.pageInView) {
 		indexHandler();
 	}
-	prepareDiv();
-
-	moveIn('project-moveFromRight');
-
-	if (pager.pageInView) {
-		moveOut('project-moveToLeft');
-	}
+	console.time('Load images');
+	preloadImages(projects[pager.index].imgs, prepareDiv);
 
 };
 
@@ -129,13 +155,8 @@ var prevPage = function() {
 	if (pager.pageInView) {
 		indexHandler();
 	}
-	prepareDiv();
-
-	moveIn('project-moveFromLeft');
-
-	if (pager.pageInView) {
-		moveOut('project-moveToRight');
-	}
+	console.time('Load images');
+	preloadImages(projects[pager.index].imgs, prepareDiv);
 
 };
 
@@ -187,7 +208,12 @@ var projects = [
 		'title': 'Glasvasen',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-1-thumb.png',
-		'img': 'img/blogg1.png',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9914335/85a4f5646d83aee8f9be2ba22699d7b2.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/914cf533e2a7d89ec5d63a3cd9176164.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/2853b7e8d991097b0ab35c784cb98732.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/fe85d75e6354687cae3176b2d9393e17.jpg'
+		],
 		'link': 'www.glasvasen.se'
 	},
 	{
@@ -196,7 +222,12 @@ var projects = [
 		'title': 'Skåneleden',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-2-thumb.jpg',
-		'img': 'img/blogg2.png',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9914335/ef7d78e17d05574406af63fb9b8a351c.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/a2a25308a9674492c2f374bb6863552c.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/600dd106c07a8802b928b0c20fc90542.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/b575ac736d0291a2e424f94ee09c6f2e.jpg'
+		],
 		'link': 'www.skaneleden.se'
 	},
 	{
@@ -205,7 +236,12 @@ var projects = [
 		'title': 'Skånska Landskap',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-3-thumb.png',
-		'img': 'img/blogg4.jpg',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/d83ccb154536767bdcf3cfb83d780569.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/832b6840d0ec922534b0d3782ac44494.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/569357280ab89a7101fc57b99cc3abd9.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/2185eeac11335fffc72d23b34a24a72e.jpg'
+		],
 		'link': 'www.skanskalandskap.se'
 	},
 	{
@@ -214,7 +250,12 @@ var projects = [
 		'title': 'Purity Vodka',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-4-thumb.jpg',
-		'img': 'img/blogg5.jpg',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/c96b27e0924edcb0d30575cc328d873d.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/44f3474b597969306df90e7728133656.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/12497f8e8884efab80c2ba95c6731e58.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/f2d6560c20561e20ac2ed7a33495e8de.jpg'
+		],
 		'link': 'www.purityvodka.com'
 	},
 	{
@@ -223,7 +264,12 @@ var projects = [
 		'title': 'VASYD',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-5-thumb.jpg',
-		'img': 'img/blogg6.jpg',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/34acc911836aedc3ef885b40f41ee153.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/3618063dca40c2d0aa23cf2a9f0aaffa.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/3276a8c560c8f5b117036ed77c3eeb1f.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/1484ef216279dc5657f16dddb2dfa2e3.jpg'
+		],
 		'link': 'www.vasyd.se'
 	},
 	{
@@ -232,7 +278,12 @@ var projects = [
 		'title': 'Malmö Live',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-6-thumb.jpg',
-		'img': 'img/blogg7.jpg',
+		'imgs': [
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/75ba6e334b6ec686927b43cf647fc043.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/df64b83d0e95577ff2e6af72b24fc30a.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/40461bd14a1ff8a78a30ea5ba14fe7c5.jpg',
+			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9493217/7ee3a198347fa20e96d4a330b4061da7.jpg'
+		],
 		'link': 'www.malmolive.se'
 	}
 ];

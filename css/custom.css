@@ -826,7 +826,7 @@ section {
 }
 
 .project-page.scroll {
-	/* overflow-y: auto; */
+	overflow-y: auto;
 }
 
 .project-current,
@@ -834,6 +834,10 @@ section {
 	height: auto;
 	visibility: visible;
 	z-index: 1;
+}
+
+.project-page img {
+	width: 100%;
 }
 
 .no-js body {
