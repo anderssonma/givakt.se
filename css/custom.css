@@ -757,6 +757,18 @@ section {
 	display: block;
 }
 
+.project-stage .progress-bar {
+	position: fixed;
+	top: 45px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #99B5BE;
+	z-index: 20;
+	-webkit-transition: width 0.1s ease-in;
+	border-right: 2px solid #cedce1;
+}
+
 .project-controls {
 	z-index: 10;
 	position: relative;

@@ -60,12 +60,19 @@ var prepareDiv = function() {
 var preloadImages = function(imgArr, callback) {
 	var img;
 	var remaining = imgArr.length;
+	$('.progress-bar').css('display', 'block');
 	for (var i = 0; i < imgArr.length; i++) {
 		img = new Image();
 		img.onload = function() {
 			--remaining;
+			var loadPercent = parseInt((imgArr.length - remaining )* 100 / imgArr.length);
+			$('.progress-bar').css('width', loadPercent + '%');
 			if (remaining <= 0) {
 				callback();
+				window.setTimeout(function() {
+					$('.progress-bar').css('width', '0%');
+					$('.progress-bar').css('display', 'none');
+				}, 200);
 			}
 		};
 		img.src = imgArr[i];
@@ -210,8 +217,8 @@ var projects = [
 		'thumbnail': 'project-1-thumb.png',
 		'imgs': [
 			'http://behance.vo.llnwd.net/profiles23/1068649/projects/9914335/85a4f5646d83aee8f9be2ba22699d7b2.jpg',
-			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/914cf533e2a7d89ec5d63a3cd9176164.jpg',
-			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/2853b7e8d991097b0ab35c784cb98732.jpg',
+			'http://interfacelift.com/wallpaper/D47cd523/03337_bluemountains_2560x1440.jpg',
+			'http://interfacelift.com/wallpaper/D47cd523/03333_spinout_1600x900.jpg',
 			'http://behance.vo.llnwd.net/profiles23/1068649/projects/10341033/fe85d75e6354687cae3176b2d9393e17.jpg'
 		],
 		'link': 'www.glasvasen.se'
