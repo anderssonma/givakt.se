@@ -793,15 +793,14 @@ section {
 	top: 45px;
 	left: 0;
 	width: 0%;
-	height: 2px;
-	background: #99B5BE;
+	height: 4px;
+	background: #EA7863;
 	z-index: 20;
 	-webkit-transition: width 0.1s ease-in;
 	-moz-transition: width 0.1s ease-in;
 	-o-transition: width 0.1s ease-in;
 	-ms-transition: width 0.1s ease-in;
 	transition: width 0.1s ease-in;
-	border-right: 2px solid #cedce1;
 }
 
 .project-controls {
