@@ -86,9 +86,11 @@ var preloadImages = function(imgArr, callback) {
 				window.clearTimeout(fx);
 			}
 			window.setTimeout(function() {
-				progressbar.css('width', '0%');
-				progressbar.css('display', 'none');
-			}, 200);
+				progressbar.css({
+					'width': '0%',
+					'display': 'none'
+				});
+			}, 400);
 		}
 	};
 
