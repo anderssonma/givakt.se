@@ -2714,7 +2714,7 @@ form.custom {
     width: 100%;
     height: auto;
     display: block;
-    background: #222222;
+    background: #3c4042;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -3124,9 +3124,9 @@ form.custom {
     background: #999999;
     float: left;
     margin-right: 6px;
-    border: solid 2px #222222;
     -webkit-border-radius: 1000px;
-    border-radius: 1000px; }
+    border-radius: 1000px;
+    cursor: pointer; }
     .orbit-bullets li.active {
       background: #222222; }
     .orbit-bullets li:last-child {
