@@ -415,7 +415,7 @@ section {
 	text-transform: uppercase;
 	line-height: 28px;
 	margin: 110px 0 4px;
-	padding: 0;
+	padding: 0 50px;
 }
 .blogg-caption.caption-large h4 {
 	margin-top: 250px;
@@ -427,7 +427,7 @@ section {
 	color: #FFF;
 	text-align: center;
 	margin: 0;
-	padding: 0;
+	padding: 0 50px;
 	display: block;
 	text-transform: uppercase;
 }
