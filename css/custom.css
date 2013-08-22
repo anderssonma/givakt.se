@@ -371,7 +371,7 @@ section {
 }
 .blogg-grid .blogg a > img {
 	opacity: 0.5;
-	-webkit-transition: 0.5s opacity;
+	-webkit-transition: 0.75s opacity;
 }
 .blogg-grid .blogg a:hover img {
 	opacity: 1;
