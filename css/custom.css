@@ -159,9 +159,7 @@ button, .button.transparent {
 	padding-left: 0;
 	padding-bottom: 0.9375em; 
 }
-.large-left-bottom .blogg-caption {
-	bottom: 14px;
-}
+
 .large-left-top {
 	padding-left: 0;
 }
@@ -394,41 +392,49 @@ section {
 .circle-img {
 	border-radius: 10000px;
 }
-
 .icon-stack {
 	opacity: .5
 }
+
+
 .blogg-caption {
 	position: absolute;
 	overflow: hidden;
+	text-align: center;
 	top: 0;
-	bottom: 15px;
-	left: 15px;
+	bottom: 0;
+	left: 0;
 	right: 0;
+	height: 100%;
 	-webkit-transition: 0.25s all ease 0.25s;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.25);
 }
 .blogg-caption h4 {
-	text-align: center;
 	color: #FFF;
 	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 28px;
-	margin: 110px 0 4px;
-	padding: 0 50px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 4px;
 }
-.blogg-caption.caption-large h4 {
-	margin-top: 250px;
+.blogg-caption .pusher {
+	display: inline-block;
+	height: 100%;
+	background: red;
+	width: 0;
+	vertical-align: middle;
+	margin-right: -0.25em;
 }
-.project-thumb .blogg-caption h4 {
-	margin-top: 180px;
+.blogg-caption .caption-center {
+	width: 80%;
+	display: inline-block;
+	vertical-align: middle;
 }
 .blogg-caption span {
 	color: #FFF;
-	text-align: center;
 	margin: 0;
-	padding: 0 50px;
-	display: block;
+	display: inline-block;
 	text-transform: uppercase;
 }
 .blogg a:hover .blogg-caption {
@@ -692,9 +698,6 @@ section {
 	}
 	.blogg-caption {
 		width: 100%; 
-	}
-	.large-left-bottom .blogg-caption {
-		bottom: 0;
 	}
 
 .utvalda-projekt .large-6 {
