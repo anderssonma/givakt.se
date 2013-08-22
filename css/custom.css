@@ -365,11 +365,12 @@ section {
 }
 .blogg-grid .blogg a {
 	display: block;
+	background: rgba(0,0,0,0.5);
 	background-image: linear-gradient(to bottom right,#dc4225,#002f4b);
 	background-image: linear-gradient(to bottom right,#d38312,#a83279);
 }
 .blogg-grid .blogg a > img {
-	opacity: 0.75;
+	opacity: 0.5;
 	-webkit-transition: 0.5s opacity;
 }
 .blogg-grid .blogg a:hover img {
@@ -407,44 +408,70 @@ section {
 }
 .blogg-caption {
 	position: absolute;
-	bottom: 14px;
-	background-color: #67A292;
-	width: 100%;
-	padding: 6px 0 5px 0;
-	display: none;
+	overflow: hidden;
+	top: 0;
+	bottom: 15px;
+	left: 15px;
+	right: 0;
+	-webkit-transition: 0.25s all ease 0.25s;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.25);
 }
-.blogg-caption ul {
-	margin-top: .7em;
+.blogg-caption h4 {
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 26px;
+	text-transform: uppercase;
+	line-height: 28px;
+	margin: 110px 0 4px;
+	padding: 0;
 }
-.blogg-caption ul li:first-child h4 {
-	font-size: 2.6em;
-	line-height: .6em;
-	margin-top: 0;
+.blogg-caption.caption-large h4 {
+	margin-top: 250px;
 }
-.blogg-caption ul li h4 {
-	font-size: 1.3em;
-}
-.blogg:nth-child(3n+1) .blogg-caption {
-	background-color: #7aaaa7;
-}
-.blogg:nth-child(even) .blogg-caption {
-	background-color: #658f95;
-}
-.blogg-caption h4, .blogg-caption p, .blogg-caption .icon-stack {
-	color: #fff;
+.blogg-caption span {
+	color: #FFF;
+	text-align: center;
 	margin: 0;
+	padding: 0;
+	display: block;
+	font-size: 20px;
 }
-.blogg-caption ul, .blogg-caption p  {
-	margin-bottom: 0;
+.blogg a:hover .blogg-caption {
+	-webkit-transform: scale(1.25);
+	opacity: 0;
+	-webkit-transition: 0.15s all ease;
 }
-.blogg-caption h3 {
-	line-height: 1.2em;
-	margin-bottom: 0;
-	color: #fff;
-	font-size: 1.4375em;
-	margin-top: .3em;
+.blogg .blogg-plus {
+	display: block;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	font-size: 40px;
+	border-radius: 30px;
+	font-weight: bold;
+	color: #FFF;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	line-height: 62px;
+	margin: -30px 0 0 -30px;
+	-webkit-transform: scale(0.5);
+	opacity: 0;
+	-webkit-transition: 0.15s all ease;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.75);
+}
+.blogg a:hover .blogg-plus {
+	-webkit-transform: scale(1);
+	opacity: 1;
+	-webkit-transition: 0.15s all ease 0.15s;
 }
 
+.blogg-caption.purity hr {
+	width: 60%;
+	margin: 0 auto 5px;
+}
 
 
 .utvalda-projekt .large-6 {
