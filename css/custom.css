@@ -5,6 +5,7 @@ body {
 	
 	
 }
+
 body.noscroll {
 	overflow-y: hidden;
 	overflow-x: hidden;
@@ -123,7 +124,7 @@ button, .button.transparent {
 	display: block;
 }
 .top-bar {
-	background: #3c4042;
+	background: rgba(60, 64, 66, 1);
 }
 .top-bar-section ul li > a {
 	background: #3c4042 !important;
@@ -134,7 +135,7 @@ button, .button.transparent {
 }
 
 .contain-to-grid {
-	background: #3c4042;
+	background: rgba(60, 64, 66, 1);
 }
 .top-bar .name h1 a {
 	color: #333;
@@ -174,37 +175,18 @@ button, .button.transparent {
 	padding-left: 0;
 }
 
-
-.horizontal-text {
-	display: table;
-	height: 100px;
-}
-.horizontal-text p {
-	display: table-cell;
-	vertical-align:middle;
-}
-.h-text-center {
-	position: absolute;
-	top: 0;
-	z-index: 1;
-	width: 40%;
-	height: 100%;
-	left: 30%;
-	display: table;
-}
-.h-text-center-box {
-	border: none;
-	color: #fff !important;
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-}
-.h-text-center-box h1,.h-text-center-box h2 {
+.h-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	color: #fff;
+	text-align: center;
+	width: 36%;
 }
-
-.orbit-container .orbit-slides-container > * {
-	height: 100%;
+.h-center h1, .h-center h2 {
+	color: #fff;
 }
 
 
@@ -263,6 +245,9 @@ section {
 
 /* ______CONTACT_______ */
 
+.contact {
+	padding-top: 0;
+}
 .phone {
 	padding: 0em 1em 1em;	
 	margin: 0;
@@ -277,6 +262,9 @@ section {
 .map img {
 	width: 100%;
 	height: auto;
+}
+.map-container {
+	padding-top: .2em;
 }
 .map {
 	padding: 0;
@@ -359,9 +347,14 @@ section {
 .blogg-page .inline-list {
 	display: inline-block;
 }
+.blogg-top-img {
+	padding: 0;
+	
+}
 .blogg-top-img img{
 	width: 100%;
 	height: auto;
+
 }
 .circle {
 	border: 1px solid #fff;
@@ -543,8 +536,19 @@ section {
 }
 .work-process .large-1 {
 	width: 12.4%;
+	margin-top: 5em;
 }
+.work-process i {
+	color: #99b6be;
+}
+p.contact {
+	margin-bottom: 0;
+
+}
+h4.contact {
+	margin-bottom: 0;
 	
+}	
 
 /* HUR VI JOBBAR */
 /* ============= */
@@ -826,6 +830,15 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
+
+	.work-process .large-1 {
+		width: 100%;
+		margin-top: 0;
+		transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		
+	}
 	.timeline-item {
 		width: 100%;
 		padding-bottom: 0;
@@ -1181,4 +1194,13 @@ section {
 }
 @keyframes moveFromRight {
 	from { transform: translateX(100%); }
+}
+{
+	z-index: 1;
+	width: 40%;
+	height: 100%;
+	left: 30%;
+	display: table;
+	
+	
 }
