@@ -429,6 +429,9 @@ section {
 .blogg-caption.caption-large h4 {
 	margin-top: 250px;
 }
+.project-thumb .blogg-caption h4 {
+	margin-top: 180px;
+}
 .blogg-caption span {
 	color: #FFF;
 	text-align: center;
@@ -450,7 +453,7 @@ section {
 	font-size: 40px;
 	border-radius: 30px;
 	font-weight: bold;
-	color: #FFF;
+	color: #E1E1E1;
 	top: 50%;
 	left: 50%;
 	text-align: center;
