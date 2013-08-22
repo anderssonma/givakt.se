@@ -1,23 +1,164 @@
-.timeline {
-	width: 900px;
-	margin: 0 auto;
-	position: relative;
+
+/* TIMELINE CSS
+=============== */
+
+/* FIXED TWEET */
+.latest-share {
+	margin-bottom: 30px;
+}
+.latest-share p,
+.latest-share h6 {
+ 	color: #333;
+ 	margin: 0 14px;
+ 	text-align: center;
+}
+.latest-share h6 {
+	font-size: 26px;
+	margin-bottom: 6px;
+	padding-top: 40px;
+}
+.latest-share p {
+	font-size: 20px;
+	padding-bottom: 20px;
+	line-height: 26px;
+}
+.latest-share h6 a {
+	color: rgba(0,0,0,0.4);
+	font-weight: normal;
+	text-shadow: none;
+	font-size: 22px;
+}
+.latest-share p a {
+	color: rgba(0,0,0,0.4);
 }
 
-.item {
-	overflow: hidden;
+/* TIMELINE BOXES */
+.timeline-item {
+	width: 20%;
+	height: 0;
 	float: left;
-	width: 300px;
-	padding: 0;
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 20%;
 	line-height: 1;
 	-webkit-animation: fadeIn 1s ease;
+	-moz-animation: fadeIn 1s ease;
+	-ms-animation: fadeIn 1s ease;
+	-o-animation: fadeIn 1s ease;
+	animation: fadeIn 1s ease;
 }
-.item .watermark {
+
+/* TIMELINE INSTAGRAM */
+.timeline-insta .mark {
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	height: 60px;
+	height: 34px;
 }
+.timeline-insta span {
+	position: absolute;
+	color: #FFF;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+	line-height: 18px;
+	background: rgba(0,0,0,0.6);
+	padding: 14px 20px;
+}
+
+/* TIMELINE TWEETS */
+.timeline-tweet {
+	background: url('../img/icon-twitter-alt.png') no-repeat 94% 94%;
+}
+.timeline-tweet.tweet-1 {
+	background-color: #99B5BE;
+}
+.timeline-tweet.tweet-1 a,
+.timeline-tweet.tweet-1 span {
+	color: #697B92;
+}
+.timeline-tweet.tweet-2 {
+	background-color: #6B6B6B;
+}
+.timeline-tweet.tweet-2 a,
+.timeline-tweet.tweet-2 span {
+	color: #444;
+}
+.timeline-tweet.tweet-3 {
+	background-color: #EA7863;
+}
+.timeline-tweet.tweet-3 a, 
+.timeline-tweet.tweet-3 span {
+	color: #B44F42;
+}
+
+.timeline-tweet p,
+.timeline-tweet h6 {
+	font-size: 20px;
+	line-height: 26px;
+	color: #FFF;
+	text-shadow: 1px 1px 0  rgba(0,0,0,0.1);
+}
+.timeline-tweet p {
+	padding: 0 30px 30px;
+}
+.timeline-tweet h6 {
+	padding: 24px 30px 0;
+}
+.timeline-tweet h6 a {
+	font-size: 14px;
+	font-weight: normal;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+  margin-left: 2px;
+}
+.timeline-tweet p a {
+	color: rgba(0,0,0,0.4);
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.1);
+}
+
+@media only screen and (max-width: 1440px) {
+	.timeline-item {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.timeline-item {
+		width: 33.3333%;
+		padding-bottom: 33.3333%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.timeline-item {
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.timeline-tweet {
+		height: auto;
+	}
+	.timeline-insta {
+		width: 100%;
+		height: auto;
+	}
+	.timeline-insta img {
+		width: 100%;
+	}
+	.timeline-insta img.mark {
+		width: auto;
+	}
+	.timeline-tweet {
+		background-position: 96% 10%;
+	}
+}
+
+
+
+/* TIMELINE APPEND ANIMATION
+========================= */
 
 @-webkit-keyframes fadeIn {
 	from {
@@ -30,106 +171,34 @@
 	}
 }
 
-.insta {
-	height: 300px;
-	background: #CCC;
+@-moz-keyframes fadeIn {
+	from {
+		opacity: 0;
+		-moz-transform: translateY(200px) scale(0.75);
+	}
+	to {
+		opacity: 1;
+		-moz-transform: translateY(0) scale(1);
+	}
 }
 
-.insta span {
-	position: absolute;
-	color: #FFF;
-	left: 0;
-	bottom: 0;
-	width: 300px;
-	font-size: 12px;
-	background: rgba(0,0,0,0.6);
-	border-radius: 3px;
-	padding: 14px 20px;
-	-webkit-font-smoothing: antialiased;
+@-o-keyframes fadeIn {
+	from {
+		opacity: 0;
+		-o-transform: translateY(200px) scale(0.75);
+	}
+	to {
+		opacity: 1;
+		-o-transform: translateY(0) scale(1);
+	}
 }
 
-.tweet {
-	height: 300px;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	background: url('../img/icon-twitter.png') no-repeat 240px 240px;
-	background-size: 40px 40px;
-}
-
-.tweet.tweet-1 {
-	background: #4593E3;
-}
-.tweet.tweet-1 a, .tweet.tweet-1 span {
-	color: #165494;
-}
-.tweet.tweet-2 {
-	background-color: #9E54BD;
-}
-.tweet.tweet-2 a, .tweet.tweet-2 span {
-	color: #5E1B7B;
-}
-.tweet.tweet-3 {
-	background: #F06060;
-}
-.tweet.tweet-3 a, .tweet.tweet-3 span {
-	color: #AB3C3C;
-}
-.tweet.tweet-4 {
-	background: #F06060;
-}
-
-.hidden {
-	display: none;
-}
-
-.item p, .item h6 {
-	font-family: "Helvetica Neue",Arial,sans-serif;
-	font-size: 20px;
-	line-height: 26px;
-	color: #FFF;
-	-webkit-font-smoothing: antialiased;
-	text-shadow: 1px 1px 0  rgba(0,0,0,0.1);
-}
-.item p {
-	padding: 0 30px 30px;
-}
-.item h6 {
-	padding: 24px 30px 0;
-}
-.item h6 span {
-	font-size: 14px;
-	font-weight: normal;
-	color: rgba(0,0,0,0.4);
-	text-shadow: none;
-  margin-left: 2px;
-}
-.item p a {
-	color: rgba(0,0,0,0.4);
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.1);
-}
-
-.sticky {
-	width: 900px;
-	margin: 40px auto;
-}
-
-.sticky p, .sticky h6 {
- 	color: #333;
- 	-webkit-font-smoothing: antialiased;
-}
-.sticky h6 {
-	font-size: 26px;
-	margin-bottom: 6px;
-	padding-top: 40px;
-}
-.sticky h6 span {
-	color: rgba(0,0,0,0.4);
-	font-weight: normal;
-	text-shadow: none;
-}
-.sticky p {
-	font-size: 20px;
-	line-height: 26px;
-}
-.sticky p a {
-	color: rgba(0,0,0,0.4);
-}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(200px) scale(0.75);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}

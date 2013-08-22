@@ -1,0 +1,227 @@
+body.noscroll {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+body.noscroll .contain-to-grid .top-bar {
+	padding-right: 7px;
+}
+
+.project-thumb {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: -webkit-filter 0.25s;
+}
+.project-thumb:hover {
+	-webkit-filter: grayscale(75%);
+}
+.project-thumb .open-project {
+	display: block;
+	height: 80px;
+	width: 80px;
+	color: rgba(255,255,255,0.75);
+	background: rgba(0,0,0,0.75);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	line-height: 80px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	margin: -40px 0 0 -40px;
+	border-radius: 40px;
+	opacity: 0;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	transform: scale(0.25);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	-moz-transition: -moz-transform 0.25s, opacity 0.25s;
+	-o-transition: -o-transform 0.25s, opacity 0.25s;
+	-ms-transition: -ms-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+
+}
+.project-thumb:hover .open-project {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+/* PAGE TRANSITIONS */
+/* ================ */
+.project-stage {
+	position: fixed;
+	top: 45px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+.project-stage.active {
+	display: block;
+}
+
+.project-stage .progress-bar {
+	position: fixed;
+	top: 45px;
+	left: 0;
+	width: 0%;
+	height: 4px;
+	background: #EA7863;
+	z-index: 20;
+	border-radius: 0 1px 1px 0;
+	-webkit-transition: width 0.1s ease-in;
+	-moz-transition: width 0.1s ease-in;
+	-o-transition: width 0.1s ease-in;
+	-ms-transition: width 0.1s ease-in;
+	transition: width 0.1s ease-in;
+}
+
+.project-controls {
+	z-index: 10;
+	position: relative;
+	opacity: 0;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+.project-controls.active {
+	opacity: 1;
+}
+
+.project-controls .nav-project {
+	position: fixed;
+	left: 50px;
+	top: 50%;
+	display: block;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	line-height: 40px;
+	z-index: 10;
+	color: #3C4042;
+	text-align: center;
+	text-shadow: 1px 1px 0  rgba(0,0,0,0.1);
+}
+
+.project-controls .next-project {
+	left: auto;
+	text-indent: 2px;
+	right: 50px;
+}
+
+.project-controls .exit-project {
+	top: 90px;
+}
+
+.project-page {
+	background: #FFF;
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.project-page.scroll {
+	overflow-y: auto;
+}
+
+.project-current,
+.no-js .project-page {
+	height: auto;
+	visibility: visible;
+	z-index: 1;
+}
+
+.project-page img {
+	width: 100%;
+}
+
+.no-js body {
+	overflow: auto;
+}
+
+.project-moveToLeft {
+	-webkit-animation: moveToLeft .6s ease both;
+	-moz-animation: moveToLeft .6s ease both;
+	animation: moveToLeft .6s ease both;
+}
+
+.project-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+.project-moveToRight {
+	-webkit-animation: moveToRight .6s ease both;
+	-moz-animation: moveToRight .6s ease both;
+	animation: moveToRight .6s ease both;
+}
+
+.project-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+@-webkit-keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveToLeft {
+	to { -moz-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+	to { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveToRight { 
+	to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight { 
+	to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight { 
+	to { transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
