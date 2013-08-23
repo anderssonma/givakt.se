@@ -27,7 +27,7 @@ body.noscroll .contain-to-grid .top-bar {
 	left: 0;
 	width: 0%;
 	height: 4px;
-	background: #EA7863;
+	background-image: linear-gradient(to bottom right,#d38312,#a83279);
 	z-index: 20;
 	border-radius: 0 1px 1px 0;
 	-webkit-transition: width 0.1s ease-in;
