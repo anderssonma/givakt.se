@@ -57,10 +57,12 @@ body.noscroll .contain-to-grid .top-bar {
 	left: 50px;
 	top: 50%;
 	display: block;
-	height: 50px;
-	width: 50px;
-	border-radius: 25px;
-	line-height: 50px;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	font-size: 26px;
+	line-height: 40px;
+	background: rgba(255,255,255,0.75);
 	z-index: 10;
 	color: #3C4042;
 	text-align: center;
@@ -76,8 +78,8 @@ body.noscroll .contain-to-grid .top-bar {
 .nav-project .nav-innerbg {
 	display: block;
 	position: absolute;
-	top: 5px;
-	left: 5px;
+	top: 0px;
+	left: 0px;
 	width: 40px;
 	height: 40px;
 	background: url('http://www.otherfocus.com/wp-content/uploads/2012/02/fortune-130x130.jpg') no-repeat;
@@ -96,9 +98,14 @@ body.noscroll .contain-to-grid .top-bar {
 .project-controls .next-project {
 	left: auto;
 	right: 50px;
+	text-indent: 1px;
+}
+.project-controls .prev-project {
+	text-indent: -2px;
 }
 .project-controls .exit-project {
 	top: 90px;
+	font-size: 20px;
 }
 .project-controls .exit-project:hover {
 	-webkit-transform: rotate(180deg);
@@ -142,6 +149,20 @@ body.noscroll .contain-to-grid .top-bar {
 
 .no-js body {
 	overflow: auto;
+}
+
+.project-page .inline-list {
+	display: inline-block;
+}
+.project-page .large-8 {
+	margin: 40px auto;
+}
+.project-page .large-6 {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+.project-page .h-center {
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 }
 
 
