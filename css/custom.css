@@ -503,6 +503,7 @@ section {
 	color: #FFF;
 	opacity: 0;
 	font-size: 46px;
+	font-weight: normal;
 	-webkit-transition: 0.25s all;
 	-moz-transition: 0.25s all;
 	-o-transition: 0.25s all;
