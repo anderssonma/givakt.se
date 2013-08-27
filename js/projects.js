@@ -179,7 +179,7 @@ $(document).ready(function() {
 
 	pager.init();
 
-	$('.project-thumb').on('click', function() {
+	$('.overlay-thumb').on('click', function() {
 		pager.index = $(this).data('project-id');
 		pager.stage.addClass('active');
 		preparePages('next');
