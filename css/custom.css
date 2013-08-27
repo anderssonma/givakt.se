@@ -670,6 +670,7 @@ h4.contact {
 	height: 400px;
 	padding: 0;
 	color: #fff;
+	display: block;
 }
 
 .footer-bkg {

@@ -211,6 +211,18 @@ $(document).ready(function() {
 		}
 	});
 
+	/*
+	$('.nav-direction').scrollspy({
+    min: $('.nav-direction').offset().top,
+    onEnter: function(element, position) {
+      $(".nav-direction").addClass('fixed');
+    },
+    onLeave: function(element, position) {
+      $(".nav-direction").removeClass('fixed');
+    }
+  });
+*/
+
 });
 
 
