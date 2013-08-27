@@ -4,6 +4,43 @@ body {
 	overflow-x: hidden;	
 }
 
+/* Effect 13: three circles */
+.cl-effect-13 a {
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 1.2em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before {
+	color: #fff;
+	text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus {
+	color: #ba7700;
+}
+
+
+
 /*_____RESET _____*/
 .orbit-container .orbit-timer , .paused {
 	display: none !important;
@@ -101,6 +138,12 @@ button, .button.transparent {
 	background-color: transparent;
 	border: 2px #fff solid;
 }
+button, .button.transparent.black {
+	background-color: transparent;
+	border: 2px #3e3e3e solid;
+	color: #3e3e3e;
+}
+
 .button.transparent:hover {
 	background-color: #fff;
 	color: #3e3e3e;
@@ -176,13 +219,18 @@ button, .button.transparent {
 .h-center h1, .h-center h2 {
 	color: #fff;
 }
-
+.h-center-wide {
+	width: 80%;
+}
 
 section {
 	padding: 100px 0;
 	margin: 0 auto;
 	display: inline-block;
 	width: 100%;
+}
+.inline-list {
+	display: inline-block;
 }
 
 /*_______ABOUT US_____*/
@@ -302,6 +350,9 @@ section {
 .map .tip ul li {
 	margin: .5em 3em;
 }
+ .contact .circle-alt-2 {
+ 	margin: 0 4%;
+ }
 
 /* ______BLOGG_______ */
 
@@ -312,13 +363,13 @@ section {
 	overflow: hidden;
 }
 .blogg-grid .columns {
-	padding-bottom: 0.9375em;
-	padding-left: 0.9375em;
+	padding-bottom: 0.234375em;
+	padding-left: 0.234375em;
 	padding-right: 0;
 }
 .blogg-caption .columns {
-	padding-right: 0.9375em;
-	padding-left: 0.9375em;
+	padding-right: 0.234375em;
+	padding-left: 0.234375em;
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -329,7 +380,7 @@ section {
 	padding-right: 0;
 }
 .blogg-grid {
-	padding-right: 0.9375em;
+	padding-right: 0.234375em;
 	padding-left: 0;
 }
 .blogg-page {
@@ -408,6 +459,21 @@ section {
 	bottom: 0;
 }
 
+.blogg .blogg-plus {
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	color: #FFF;
+	top: 50%;
+	left: 50%;
+	line-height: 28px;
+	margin: -13px 0 0 -13px;
+	opacity: 0;
+	-webkit-transform: scale(0.5);
+	-webkit-transition: 0.15s all ease;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+}
 .blogg-caption h4 {
 	color: #FFF;
 	font-weight: bold;
@@ -440,21 +506,6 @@ section {
 	-webkit-transform: scale(1.25);
 	opacity: 0;
 	-webkit-transition: 0.15s all ease;
-}
-.blogg .blogg-plus {
-	display: block;
-	position: absolute;
-	width: 26px;
-	height: 26px;
-	color: #FFF;
-	top: 50%;
-	left: 50%;
-	line-height: 28px;
-	margin: -13px 0 0 -13px;
-	opacity: 0;
-	-webkit-transform: scale(0.5);
-	-webkit-transition: 0.15s all ease;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.55);
 }
 .blogg a:hover .blogg-plus {
 	-webkit-transform: scale(1);
@@ -521,11 +572,11 @@ section {
 	top: 0;
 	left: 0;
 	padding: 20px;
-	background:rgba(236, 91, 103, 0.96);
+	background: #e7735b;
 	color: #fff;
 }
 
-.grid figcaption h3 {
+.grid figcaption h4 {
 	margin: 0;
 	padding: 0;
 	color: #fff;
@@ -718,4 +769,19 @@ h4.contact {
 
 .utvalda-projekt .large-6 {
 	padding: 0;
+}
+{
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	color: #FFF;
+	top: 50%;
+	left: 50%;
+	line-height: 28px;
+	margin: -13px 0 0 -13px;
+	opacity: 0;
+	-webkit-transform: scale(0.5);
+	-webkit-transition: 0.15s all ease;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.55);	
 }
