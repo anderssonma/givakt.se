@@ -74,7 +74,7 @@ h1 {
 	line-height: 1em;
 }
 .f-medium-x2 {
-	font-size: 6.8em;
+	font-size: 5em;
 	margin-bottom: 0;
 	line-height: 1em;
 }
@@ -214,7 +214,7 @@ button, .button.transparent.black {
 	transform: translate(-50%, -50%);
 	color: #fff;
 	text-align: center;
-	width: 39%;
+	width: 80%;
 }
 .h-center h1, .h-center h2 {
 	color: #fff;
