@@ -179,7 +179,7 @@ $(document).ready(function() {
 
 	pager.init();
 
-	$('.project-thumb').on('click', function() {
+	$('.overlay-thumb').on('click', function() {
 		pager.index = $(this).data('project-id');
 		pager.stage.addClass('active');
 		preparePages('next');
@@ -210,6 +210,18 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	/*
+	$('.nav-direction').scrollspy({
+    min: $('.nav-direction').offset().top,
+    onEnter: function(element, position) {
+      $(".nav-direction").addClass('fixed');
+    },
+    onLeave: function(element, position) {
+      $(".nav-direction").removeClass('fixed');
+    }
+  });
+*/
 
 });
 
