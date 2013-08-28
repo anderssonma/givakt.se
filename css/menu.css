@@ -1,12 +1,66 @@
 body {
 	padding-top: 0 !important;
-  background: #262626;
   position: relative;
 }
+
+.logotyp {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 18px;
+  line-height: 45px;
+  padding: 0 10px;
+  color: #FFF;
+}
+.logotyp.dark {
+  color: #333;
+}
+#nav ul li a.logotyp {
+  position: static;
+  top: auto;
+  left: auto;
+  font-weight: normal !important;
+  font-size: 22px;
+  line-height: 22px;
+  color: #FFF;
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+#nav .logotyp:before, #nav .logotyp:before {
+  display: block;
+}
+.right-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  -webkit-transition: 0.5s all;
+}
+.right-menu.closed {
+  -webkit-transform: translateX(250px);
+  opacity: 0;
+}
+.right-menu li {
+  float: left;
+}
+.right-menu li a {
+  padding: 0 15px;
+  line-height: 45px;
+  color: #FFF;
+  font-size: 0.8125em;
+  font-weight: bold;
+}
+.right-menu.dark li a {
+  color: #333;
+}
+
 .block {
   position: relative;
   margin: 0 auto;
-  max-width: 60em;
   z-index: 2;
   padding: 45px 0 0;
   background: #333333;
@@ -34,10 +88,13 @@ body {
 	position: fixed;
   background: transparent;
 	top: 0;
-	right: 0;
+	right: -60px;
   padding: 0 20px;
-  background: #444545;
+  background: rgba(0,0,0,0.75);
   border-radius: 0 0 0 5px;
+}
+.nav-btn.show {
+  right: 0;
 }
 
 .nav-btn:hover, .close-btn:hover {
@@ -69,10 +126,10 @@ body {
 }
 #nav li a {
   display: block;
-  color: #ccc;
-  font-size: 0.875em;
-  line-height: 1.28571em;
-  padding: 0.85714em 2.14286em;
+  color: #999;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 13px 30px;
   text-transform: uppercase;
   font-weight: bold;
   outline: none;
@@ -95,9 +152,8 @@ body {
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-#nav li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.8em;
+#nav li:first-child {
+  border-top: none;
 }
 #nav li.is-active:after {
   z-index: 50;
@@ -110,6 +166,9 @@ body {
   border-top: 0.625em transparent solid;
   border-bottom: 0.625em transparent solid;
   border-left: 0.625em #666 solid;
+}
+#nav li:last-child.is-active:after {
+  top: 20px;
 }
 #nav li span, #nav li strong {
   color: #999;

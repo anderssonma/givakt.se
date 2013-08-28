@@ -106,11 +106,6 @@ h1 {
 	margin: 40px auto;
 	position: relative;
 }
-.logo {
-	color: #fff;
-	font-size: 1.4em;
-	line-height: 1.8em !important;
-}
 h1, h2, h3, h4, h5, h6 {
 
 }
@@ -148,44 +143,9 @@ button, .button.transparent.black {
 }
 
 
-/*_______HEADER______ */
-
-.top-bar-section {
-	padding: 0;
-	display: block;
-}
-.top-bar {
-	background: transparent;
-}
-.top-bar-section ul li > a {
-	background: transparent !important;
-	color: #fff;
-}
-.top-bar-section ul li.hover > a {
-	color: #999;
-}
-.top-bar-section ul {
-	background: transparent;
-}
 
 .contain-to-grid {
 	background: transparent;
-}
-.top-bar .name h1 a {
-	color: #333;
-}
-.top-bar.expanded .title-area {
-	background: #3c4042;
-}
-.top-bar .toggle-topbar.menu-icon a span {
-	-webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
-	box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
-}
-.top-bar.expanded .toggle-topbar a {
-	color: #333;
-}
-.top-bar .toggle-topbar.menu-icon a {
-	color: #fff;
 }
 .hero {
 	padding: 0;

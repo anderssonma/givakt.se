@@ -13,6 +13,23 @@ $(document).ready(function(){
     $('nav').removeClass('show');
   });
 
+  var isActive = false;
+  var $window = $(window);
+  $window.on('scroll', function() {
+    var scrollPos = $window.scrollTop();
+    if (!isActive && scrollPos > 20) {
+      $('.right-menu').addClass('closed');
+      window.setTimeout(function() {
+        $('.nav-btn').addClass('show');
+      }, 200);
+      isActive = true;
+    } else if (isActive && scrollPos < 20) {
+      $('.nav-btn').removeClass('show');
+      $('.right-menu').removeClass('closed');
+      isActive = false;
+    }
+  });
+
 });
 
 $(window).load(function() {
