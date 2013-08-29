@@ -161,12 +161,15 @@ body.noscroll .contain-to-grid .top-bar {
 	float: none;
 }
 .project-page .image-full {
-	width: 100%;
+	width: 101%;
 	height: 80%; 
 	position: relative; 
 	background-repeat: no-repeat;
 	background-position: center; 
 	background-size: cover;
+}
+.project-page .h-center > h3 {
+	color: #FFF;
 }
 
 .no-js body {
