@@ -48,6 +48,8 @@ var prepareDiv = function() {
 	console.timeEnd('Load images');
 	var wrapper = pager.pageIn.selector;
 	$(wrapper + ' h1').text(projects[pager.index].title);
+	$(wrapper + ' .h-center h3').html(projects[pager.index].subtitle);
+	$(wrapper + ' .large-6 h3').html(projects[pager.index].subsection);
 	/* $(wrapper + ' p').text(projects[pager.index].desc); */
 	for (var i = 0; i < projects[pager.index].imgs.length; i++) {
 		if (i === 0) {
@@ -262,6 +264,8 @@ var projects = [
 		'tags': ['webb','kommunikation'],
 		'id': 0,
 		'title': 'Glasvasen',
+		'subtitle': 'Jernhusen',
+		'subsection': 'HAUTE CONTOR',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. YOLO et semiotics fashion axe vinyl, chambray veniam street art organic sartorial. Portland scenester salvia cred labore, squid seitan delectus elit aliquip skateboard bitters. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown. Pinterest fugiat brunch DIY semiotics, photo booth gluten-free anim accusamus non lo-fi aliqua.',
 		'thumbnail': 'project-1-thumb.png',
 		'imgs': [
@@ -275,6 +279,8 @@ var projects = [
 		'tags': ['redaktionellt','kommunikation'],
 		'id': 1,
 		'title': 'Dags att komma igång igen efter semestern',
+		'subtitle': '2013/10/8&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;MIKAEL HJELM',
+		'subsection': 'GRÖNT ÄR SKÖNT',
 		'desc': 'Flannel vero odio, aesthetic veniam umami Austin voluptate consequat. Ugh Portland mlkshk scenester wayfarers. Culpa Terry Richardson exercitation ennui, sapiente actually single-origin coffee irony pariatur brunch. 8-bit sint consectetur, ad Wes Anderson Schlitz Pinterest Cosby sweater chambray stumptown.',
 		'thumbnail': 'project-2-thumb.jpg',
 		'imgs': [
