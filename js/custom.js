@@ -14,7 +14,7 @@ $(document).ready(function(){
   });
   $(".flat-icon").flatshadow({
         angle: "SE",
-            fade: true,
+            fade: false,
         boxShadow: false // Accept full 6 digit hex color (#000000)
   });
 
