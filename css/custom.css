@@ -4,6 +4,14 @@ body {
 	overflow-x: hidden;
 	font-family: 'ProximaNova';
 }
+.flat-icon {
+	padding: 19px 26px;
+	font-size: 1.4em;
+	display: inline-block;
+	line-height: 100%;
+	overflow: hidden;
+	border-radius: 10000px;
+}
 
 /* Effect 13: three circles */
 .cl-effect-13 a {

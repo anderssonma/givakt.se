@@ -12,6 +12,11 @@ $(document).ready(function(){
     $('#nav-open-btn, #inner-wrap').removeClass('menu-open');
     $('nav').removeClass('show');
   });
+  $(".flat-icon").flatshadow({
+        angle: "SE",
+            fade: true,
+        boxShadow: false // Accept full 6 digit hex color (#000000)
+  });
 
 });
 
