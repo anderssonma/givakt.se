@@ -15,6 +15,7 @@ body.noscroll .contain-to-grid .top-bar {
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
+	z-index: 20;
 }
 
 .project-stage.active {
