@@ -24,8 +24,10 @@ $(document).ready(function(){
       }, 200);
       isActive = true;
     } else if (isActive && scrollPos < 20) {
-      $('.nav-btn').removeClass('show');
+      $('.nav-btn').removeClass('show menu-open');
       $('.right-menu').removeClass('closed');
+      $('#inner-wrap').removeClass('menu-open');
+      $('nav').removeClass('show');
       isActive = false;
     }
   });
