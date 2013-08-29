@@ -13,6 +13,41 @@ body {
 	-moz-border-radius: 10000px;
     -webkit-border-radius: 10000px;
 }
+.facts-block .kontor {
+	background: #f6f2e9;
+	}
+.kontor h2, .kontor h5 {
+	color: #868686;
+	line-height: .8em;
+	margin-bottom: 0;
+}
+.kontor h5 {
+	padding-bottom: 1em;
+	padding-top: .5em;
+}
+.icon-Kontor_1 {
+	font-size: 10em;	
+	color: #868686;
+}
+.icon-Kontor_2 {
+	font-size: 7em;
+	color: #868686;
+	opacity: 0;
+	position: absolute;
+	opacity: 0;
+	bottom:20px;
+	-webkit-transition: all 1s;
+	left: 50%;
+	margin-left: -56px;
+
+}
+.kontor:hover .icon-Kontor_2 {
+	bottom: 125px;
+	opacity: 1;
+}
+.kontor:hover .icon-Kontor_1:before {
+	-webkit-animation: shake 0.5s 0.75s infinite linear;
+}
 .icon-Analys, .icon-Strategi, .icon-Ideer, .icon-Kommunikation, .icon-Design, .icon-Webb {
 	font-size: 7em !important;
 }
@@ -20,8 +55,6 @@ body {
 	font-size: 12em;
 	color:#d8e3e1;
 }
-
-
 /* Effect 13: three circles */
 .cl-effect-13 a {
 	-webkit-transition: color 0.3s;
@@ -153,7 +186,7 @@ button, .button.transparent {
 }
 button, .button.transparent.black {
 	background-color: transparent;
-	border: 2px #3e3e3e solid;
+	border: 1px #3e3e3e solid;
 	color: #3e3e3e;
 }
 
@@ -375,7 +408,10 @@ section {
 .blogg-page .inline-list {
 	display: inline-block;
 }
-
+.blogg-top-img {
+	padding: 0;
+	
+}
 .blogg-top-img img{
 	width: 100%;
 	height: auto;
@@ -414,7 +450,7 @@ section {
 	-webkit-transition: 0.5s color;
 }
 .circle-alt-2:hover .icon-light {
-	color: #E7735B;
+	color: #3C4042;
 }
 .circle-img {
 	border-radius: 10000px;
@@ -577,7 +613,7 @@ section {
 }
 
 .grid figcaption h4 {
-	margin: 0;
+	margin: 0 0 .7em 0;
 	padding: 0;
 	color: #fff;
 }
@@ -778,6 +814,21 @@ h4.contact {
 .utvalda-projekt .large-6 {
 	padding: 0;
 }
+{
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	color: #FFF;
+	top: 50%;
+	left: 50%;
+	line-height: 28px;
+	margin: -13px 0 0 -13px;
+	opacity: 0;
+	-webkit-transform: scale(0.5);
+	-webkit-transition: 0.15s all ease;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.55);	
+}
 
 .hero {
 	position: relative;
@@ -796,3 +847,4 @@ h4.contact {
 	bottom: 4px;
 	background: rgba(0,0,0,0.25);
 }
+

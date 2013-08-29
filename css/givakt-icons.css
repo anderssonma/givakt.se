@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-Analys, .icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Design, .icon-Forsta, .icon-Formulera, .icon-Forandra {
+.icon-Analys, .icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Design, .icon-Forsta, .icon-Formulera, .icon-Forandra, .icon-prickar, .icon-Pratbubbla_2, .icon-Pratbubbla_1, .icon-Person_2, .icon-Person_1, .icon-Mouse, .icon-Kontor_2, .icon-Kontor_1, .icon-Dokument_3, .icon-Dokument_2, .icon-Dokument_1, .icon-Computer, .icon-bubbla, .icon-mustasch {
 	font-family: 'givakt-icons';
 	speak: none;
 	font-style: normal;
@@ -64,4 +64,46 @@ you can use the generic selector below, but it's slower:
 }
 .icon-Forandra:before {
 	content: "\e008";
+}
+.icon-prickar:before {
+	content: "\e009";
+}
+.icon-Pratbubbla_2:before {
+	content: "\e00a";
+}
+.icon-Pratbubbla_1:before {
+	content: "\e00b";
+}
+.icon-Person_2:before {
+	content: "\e00c";
+}
+.icon-Person_1:before {
+	content: "\e00d";
+}
+.icon-Mouse:before {
+	content: "\e00e";
+}
+.icon-Kontor_2:before {
+	content: "\e00f";
+}
+.icon-Kontor_1:before {
+	content: "\e010";
+}
+.icon-Dokument_3:before {
+	content: "\e011";
+}
+.icon-Dokument_2:before {
+	content: "\e012";
+}
+.icon-Dokument_1:before {
+	content: "\e013";
+}
+.icon-Computer:before {
+	content: "\e014";
+}
+.icon-bubbla:before {
+	content: "\e015";
+}
+.icon-mustasch:before {
+	content: "\e016";
 }
