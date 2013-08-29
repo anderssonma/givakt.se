@@ -6,8 +6,8 @@ body {
 .logotyp {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   z-index: 10;
   font-size: 18px;
   line-height: 45px;
@@ -15,7 +15,13 @@ body {
   color: #FFF;
   font-size: 2em;
 }
+.logotyp:hover {
+  color: #FFF;
+}
 .logotyp.dark {
+  color: #333;
+}
+.logotyp.dark:hover {
   color: #333;
 }
 #nav ul li .logotyp {
@@ -39,8 +45,8 @@ body {
 .right-menu {
   display: block;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   z-index: 10;
   list-style: none;
   -webkit-transition: 0.5s all;
@@ -57,7 +63,6 @@ body {
   line-height: 45px;
   color: #FFF;
   font-size: 0.8125em;
-  font-weight: bold;
 }
 .right-menu.dark li a {
   color: #333;
