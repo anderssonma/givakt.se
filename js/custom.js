@@ -18,6 +18,25 @@ $(document).ready(function(){
         boxShadow: false // Accept full 6 digit hex color (#000000)
   });
 
+  var isActive = false;
+  var $window = $(window);
+  $window.on('scroll', function() {
+    var scrollPos = $window.scrollTop();
+    if (!isActive && scrollPos > 20) {
+      $('.right-menu').addClass('closed');
+      window.setTimeout(function() {
+        $('.nav-btn').addClass('show');
+      }, 200);
+      isActive = true;
+    } else if (isActive && scrollPos < 20) {
+      $('.nav-btn').removeClass('show menu-open');
+      $('.right-menu').removeClass('closed');
+      $('#inner-wrap').removeClass('menu-open');
+      $('nav').removeClass('show');
+      isActive = false;
+    }
+  });
+
 });
 
 $(window).load(function() {

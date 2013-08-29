@@ -8,13 +8,14 @@ body.noscroll .contain-to-grid .top-bar {
 
 .project-stage {
 	position: fixed;
-	top: 45px;
+	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
+	z-index: 20;
 }
 
 .project-stage.active {
@@ -23,7 +24,7 @@ body.noscroll .contain-to-grid .top-bar {
 
 .project-stage .progress-bar {
 	position: fixed;
-	top: 45px;
+	top: 0;
 	left: 0;
 	width: 0%;
 	height: 4px;

@@ -11,26 +11,52 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link rel="stylesheet" href="css/font.css" />
   <link rel="stylesheet" href="css/givakt-icon-font.css">
+  <link rel="stylesheet" href="css/menu.css">
   <script src="js/vendor/modernizr.all.js"></script>
 
 </head>
 <body>
-<div class="fixed contain-to-grid">
-	<nav class="top-bar">
-		<ul class="title-area">
-			<li class="name"><h1><a href="index.html"><span aria-hidden="true" class="icon-GivAkt_WHITE logo"></span></a></h1></li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-		</ul>
-		<section class="top-bar-section">
-		 	<ul class="right">
-			 <!--	<li><a href="utvalda-projekt.html">UTVALDA PROJEKT</a></li>-->
-        <li><a href="om-oss.html">OM OSS</a></li>
-        <li><a href="blogg.html">BLOGG & JOBB</a></li>
-        <li><a href="kontakt.html">KONTAKT</a></li>
-			</ul>
-		</section>
-	</nav>
-</div>
+
+<a class="logotyp dark icon-GivAkt_WHITE logo" href="index.html"></a>
+<ul class="right-menu dark">
+  <li><a href="om-oss.html">OM OSS</a></li>
+  <li><a href="blogg.html">BLOGG & JOBB</a></li>
+  <li><a href="kontakt.html">KONTAKT</a></li>
+</ul>
+
+<a class="nav-btn icon-reorder" id="nav-open-btn"></a>
+<nav id="nav" role="navigation">
+  <div class="block">
+    <ul>
+      <li>
+        <a class="logotyp icon-GivAkt_WHITE logo" href="index.html"></a>
+      </li>
+      <li>
+        <a href="index.html">Start</a>
+      </li>
+      <li>
+        <a href="om-oss.html">Om Oss</a>
+      </li>
+      <li class="is-active">
+        <a href="blogg.html">Blogg & Jobb</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+        <strong>Malmö</strong>
+        <span>040-631 34 70</span>
+        <span><a href="mailto:malmo.info@givakt.se">malmo.info@givakt.se</a></span>
+        <span>Södra Förstadsgatan 2, 21143 Malmö</span>
+        <strong class="last">Växjö</strong>
+        <span>047-072 97 29</span>
+        <span><a href="mailto:info@givakt.se">info@givakt.se</a></span>
+        <span>Honnörsgatan 12, 351 06 Växjö</span>
+      </li>
+    </ul>
+    <a class="close-btn icon-remove" id="nav-close-btn"></a>
+  </div>
+</nav>
+<div id="inner-wrap">
+
 <section>
   <div class="row text-center">
     <h2>BLOGG &amp; JOBB</h2>
@@ -169,12 +195,13 @@
 
   </div>
 </section>
+</div>
 
 <!-- PROJECTS OVERLAY -->
 <div class="project-stage">
   <div class="progress-bar"></div>
   <div class="project-controls">
-    <span class="nav-project exit-project icon-remove icon-2x"></span>
+    <span class="nav-project exit-project icon-reorder"></span>
     <span class="nav-project prev-project icon-angle-left icon-2x">
       <span class="nav-innerbg"></span>
     </span>
@@ -257,7 +284,6 @@
   </div>
 
 </div>
-
  <!-- <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
@@ -266,7 +292,9 @@
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="js/vendor/jquery.scrollspy.js"></script>
   <script src="js/foundation.min.js"></script>
+  <script src="js/custom.js"></script>
   <script src="js/projects.js"></script>
+
  <!-- För prototyp -->
 
 
