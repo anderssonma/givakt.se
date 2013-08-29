@@ -17,7 +17,7 @@ body {
 .logotyp.dark {
   color: #333;
 }
-#nav ul li a.logotyp {
+#nav ul li .logotyp {
   position: static;
   top: auto;
   left: auto;
@@ -28,6 +28,10 @@ body {
   padding-top: 0;
   padding-bottom: 16px;
 }
+#nav ul li .logotyp:hover {
+  background: transparent;
+}
+
 #nav .logotyp:before, #nav .logotyp:before {
   display: block;
 }
@@ -134,13 +138,23 @@ body {
   font-weight: bold;
   outline: none;
 }
+#nav li:last-child {
+  padding-bottom: 12px;
+}
 
-#nav li a:focus, #nav li a:hover {
+#nav li a:focus, #nav li a:hover{
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
 }
 #nav li.is-active a {
   color: #fff;
+}
+#nav ul li:last-child:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+#nav ul li:last-child:hover > a {
+  color: #FFF;
+  background: transparent;
 }
 
 #nav .close-btn {
