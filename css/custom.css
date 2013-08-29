@@ -358,10 +358,7 @@ section {
 .blogg-page .inline-list {
 	display: inline-block;
 }
-.blogg-top-img {
-	padding: 0;
-	
-}
+
 .blogg-top-img img{
 	width: 100%;
 	height: auto;
@@ -400,7 +397,7 @@ section {
 	-webkit-transition: 0.5s color;
 }
 .circle-alt-2:hover .icon-light {
-	color: #3C4042;
+	color: #E7735B;
 }
 .circle-img {
 	border-radius: 10000px;
@@ -753,21 +750,6 @@ h4.contact {
 
 .utvalda-projekt .large-6 {
 	padding: 0;
-}
-{
-	display: block;
-	position: absolute;
-	width: 26px;
-	height: 26px;
-	color: #FFF;
-	top: 50%;
-	left: 50%;
-	line-height: 28px;
-	margin: -13px 0 0 -13px;
-	opacity: 0;
-	-webkit-transform: scale(0.5);
-	-webkit-transition: 0.15s all ease;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.55);	
 }
 
 .hero {

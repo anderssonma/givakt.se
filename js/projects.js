@@ -50,7 +50,11 @@ var prepareDiv = function() {
 	$(wrapper + ' h1').text(projects[pager.index].title);
 	$(wrapper + ' p').text(projects[pager.index].desc);
 	for (var i = 0; i < projects[pager.index].imgs.length; i++) {
-		$(wrapper + ' .img-' + i).attr('src', projects[pager.index].imgs[i]);
+		if (i === 0) {
+			$(wrapper + ' .image-full').css('background-image', 'url(' + projects[pager.index].imgs[i] + ')');
+		} else {
+			$(wrapper + ' .img-' + i).attr('src', projects[pager.index].imgs[i]);
+		}
 	}
 
 	if (pager.direction === 'next') {
@@ -209,6 +213,33 @@ $(document).ready(function() {
 					break;
 			}
 		}
+	});
+
+	var controlsVisible = false;
+	var $window = $(window);
+	var page1 = $('.project-page-1');
+	var page2 = $('.project-page-2');
+
+	page1.on('scroll', function() {
+	  var treshold = window.innerHeight * 0.375;
+  	if (!controlsVisible && page1.scrollTop() > treshold) {
+  		$('.project-stage .icon-2x').addClass('show');
+  		controlsVisible = true;
+  	} else if (controlsVisible && page1.scrollTop() < treshold) {
+  		$('.project-stage .icon-2x').removeClass('show');
+  		controlsVisible = false;
+  	}
+	});
+
+	page2.on('scroll', function() {
+	  var treshold = window.innerHeight * 0.375;
+  	if (!controlsVisible && page2.scrollTop() > treshold) {
+  		$('.project-stage .icon-2x').addClass('show');
+  		controlsVisible = true;
+  	} else if (controlsVisible && page2.scrollTop() < treshold) {
+  		$('.project-stage .icon-2x').removeClass('show');
+  		controlsVisible = false;
+  	}
 	});
 
 	/*

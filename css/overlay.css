@@ -105,21 +105,26 @@ body.noscroll .contain-to-grid .top-bar {
 	text-indent: -2px;
 }
 .project-controls .exit-project {
-	top: 90px;
+	top: 50px;
 	font-size: 20px;
 }
 .project-controls .exit-project:hover {
 	-webkit-transform: rotate(180deg);
 	color: #3C4042;
 }
+.project-controls .icon-2x {
+	opacity: 0;
+}
+.project-controls .icon-2x.show {
+	opacity: 1;
+}
 
 .project-page {
 	background: #FFF;
-	visibility: hidden;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 100%;
 	bottom: 0;
 	right: 0;
 	-webkit-backface-visibility: hidden;
@@ -142,10 +147,26 @@ body.noscroll .contain-to-grid .top-bar {
 	height: auto;
 	visibility: visible;
 	z-index: 1;
+	left: 0;
 }
 
 .project-page img {
 	width: 100%;
+}
+.project-page .img-0 {
+ float: left;
+}
+.project-page .blogg-top-img {
+	padding: 0;
+	float: none;
+}
+.project-page .image-full {
+	width: 100%;
+	height: 80%; 
+	position: relative; 
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
 }
 
 .no-js body {
@@ -163,7 +184,7 @@ body.noscroll .contain-to-grid .top-bar {
 	margin-bottom: 80px;
 }
 .project-page .h-center {
-	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	text-transform: uppercase;
 }
 
 
