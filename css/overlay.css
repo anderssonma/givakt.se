@@ -61,7 +61,7 @@ body.noscroll .contain-to-grid .top-bar {
 	height: 40px;
 	width: 40px;
 	border-radius: 20px;
-	font-size: 26px;
+	font-size: 36px;
 	line-height: 40px;
 	background: rgba(255,255,255,0.75);
 	z-index: 10;
@@ -83,13 +83,17 @@ body.noscroll .contain-to-grid .top-bar {
 	left: 0px;
 	width: 40px;
 	height: 40px;
-	background: url('http://www.otherfocus.com/wp-content/uploads/2012/02/fortune-130x130.jpg') no-repeat;
+	background: url('../img/img_prev.jpg') no-repeat;
 	background-size: 100% 100%;
 	opacity: 0;
 	-webkit-transition: 0.25s all;
 	border-radius: 25px;
 	color: #FFF;
 	font-weight: bold;
+}
+.nav-project.next-project .nav-innerbg {
+	background: url('../img/img_next.jpg') no-repeat;
+	background-size: 100% 100%;
 }
 .nav-project:hover .nav-innerbg {
 	opacity: 1;
