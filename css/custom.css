@@ -14,7 +14,39 @@ body {
 	overflow: hidden;
 	border-radius: 10000px;
 	-moz-border-radius: 10000px;
-    -webkit-border-radius: 10000px;
+  -webkit-border-radius: 10000px;
+  -webkit-transition: 0.3s -webkit-transform;
+  background: #e87966;
+}
+.work-process .flat-icon {
+	background: #9AB5bc;
+}
+.work-process .text-overlay {
+	position: absolute;
+	background: #A1BDC4;
+	top: -20px;
+	right: -20px;
+	left: -20px;
+	bottom: 20px;
+	z-index: 10;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 30px;
+	color: #FFF;
+	opacity: 0;
+	-webkit-transition: 0.3s all;
+	-webkit-transform: scale(0.5);
+}
+.work-process .large-3:hover .text-overlay {
+	opacity: 1;
+	-webkit-transform: scale(1);
+}
+.work-process .large-3:hover .flat-icon {
+	-webkit-transform: scale(0.5);
+}
+.work-process .large-3:hover > h4 {
+	opacity: 0;
 }
 .facts-block .kontor {
 	background: #f6f2e9;
@@ -39,7 +71,7 @@ body {
 	position: absolute;
 	opacity: 0;
 	bottom:20px;
-	-webkit-transition: all 1s;
+	-webkit-transition: all 0.5s;
 	left: 50%;
 	margin-left: -56px;
 
@@ -49,7 +81,7 @@ body {
 	opacity: 1;
 }
 .kontor:hover .icon-Kontor_1:before {
-	-webkit-animation: shake 0.5s 0.75s infinite linear;
+	-webkit-animation: shake 0.5s 0.4s infinite linear;
 }
 .icon-Analys, .icon-Strategi, .icon-Ideer, .icon-Kommunikation, .icon-Design, .icon-Webb {
 	font-size: 7em !important;
@@ -859,4 +891,120 @@ h4.contact {
 	h1 {
 		font-size: 2.75em !important;
 		}
+}
+.icon-footer {
+	position: absolute;
+	bottom: 1.0625em;
+}
+.icon-footer a {
+	margin-right: 18px;
+}
+.hi-icon {
+	display: inline-block !important;
+	font-size: 0px !important;
+	cursor: pointer !important;
+	width: 60px !important;
+	height: 60px !important;
+	border-radius: 50%;
+	text-align: center !important;
+	position: relative !important;
+	z-index: 1 !important;
+	color: #fff !important;
+}
+figure .hi-icon {
+	margin: 0 8px;
+}
+.hi-icon:after {
+	pointer-events: none !important;
+	position: absolute !important;
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: 50% !important;
+	content: '' !important;
+	-webkit-box-sizing: content-box !important; 
+	-moz-box-sizing: content-box !important; 
+	box-sizing: content-box !important;
+}
+.hi-icon:before {
+	speak: none;
+	font-size: 34px !important;
+	line-height: 64px !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block !important;
+	-webkit-font-smoothing: antialiased;
+}
+
+.hi-icon:hover {
+	background: rgba(255,255,255,0.05) !important;
+	-webkit-transform: scale(0.93) !important;
+	-moz-transform: scale(0.93) !important;
+	-ms-transform: scale(0.93) !important;
+	transform: scale(0.93) !important;
+	color: #fff !important;
+}
+
+.hi-icon:hover:after {
+	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+	animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+figure .hi-icon:hover:after {
+	-webkit-animation: sonarEffectAlt 1.3s ease-out 75ms;
+	-moz-animation: sonarEffectAlt 1.3s ease-out 75ms;
+	animation: sonarEffectAlt 1.3s ease-out 75ms;
+}
+
+
+.hi-icon {
+	background: rgba(255,255,255,0.1) !important;
+	-webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s !important;
+	-moz-transition: -moz-transform ease-out 0.1s, background 0.2s !important;
+	transition: transform ease-out 0.1s, background 0.2s !important;
+}
+
+.hi-icon:after {
+	top: 0 !important;
+	left: 0 !important;
+	padding: 0 !important;
+	z-index: -1 !important;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.1) !important;
+	opacity: 0 !important;
+	-webkit-transform: scale(0.9) !important;
+	-moz-transform: scale(0.9) !important;
+	-ms-transform: scale(0.9) !important;
+	transform: scale(0.9) !important;
+}
+
+@-webkit-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes sonarEffectAlt {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
 }
