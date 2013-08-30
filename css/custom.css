@@ -11,7 +11,39 @@ body {
 	overflow: hidden;
 	border-radius: 10000px;
 	-moz-border-radius: 10000px;
-    -webkit-border-radius: 10000px;
+  -webkit-border-radius: 10000px;
+  -webkit-transition: 0.3s -webkit-transform;
+  background: #e87966;
+}
+.work-process .flat-icon {
+	background: #9AB5bc;
+}
+.work-process .text-overlay {
+	position: absolute;
+	background: #A1BDC4;
+	top: -20px;
+	right: -20px;
+	left: -20px;
+	bottom: 20px;
+	z-index: 10;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 30px;
+	color: #FFF;
+	opacity: 0;
+	-webkit-transition: 0.3s all;
+	-webkit-transform: scale(0.5);
+}
+.work-process .large-3:hover .text-overlay {
+	opacity: 1;
+	-webkit-transform: scale(1);
+}
+.work-process .large-3:hover .flat-icon {
+	-webkit-transform: scale(0.5);
+}
+.work-process .large-3:hover > h4 {
+	opacity: 0;
 }
 .facts-block .kontor {
 	background: #f6f2e9;
@@ -36,7 +68,7 @@ body {
 	position: absolute;
 	opacity: 0;
 	bottom:20px;
-	-webkit-transition: all 1s;
+	-webkit-transition: all 0.5s;
 	left: 50%;
 	margin-left: -56px;
 
@@ -46,7 +78,7 @@ body {
 	opacity: 1;
 }
 .kontor:hover .icon-Kontor_1:before {
-	-webkit-animation: shake 0.5s 0.75s infinite linear;
+	-webkit-animation: shake 0.5s 0.4s infinite linear;
 }
 .icon-Analys, .icon-Strategi, .icon-Ideer, .icon-Kommunikation, .icon-Design, .icon-Webb {
 	font-size: 7em !important;
