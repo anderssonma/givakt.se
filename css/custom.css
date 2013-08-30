@@ -4,6 +4,11 @@ body {
 	overflow-x: hidden;
 	font-family: 'ProximaNova';
 }
+.backface {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
 .liten {
 	font-size: .3em !important;
 	margin-top: .5em;
@@ -789,6 +794,14 @@ h4.contact {
 }
 .footer .icons-ul li i {
 	-webkit-transition: 0.5s color;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.footer .icons-ul li i:before {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 .footer .icons-ul li:hover i {
 	color: #888;
@@ -870,21 +883,6 @@ h4.contact {
 
 .utvalda-projekt .large-6 {
 	padding: 0;
-}
-{
-	display: block;
-	position: absolute;
-	width: 26px;
-	height: 26px;
-	color: #FFF;
-	top: 50%;
-	left: 50%;
-	line-height: 28px;
-	margin: -13px 0 0 -13px;
-	opacity: 0;
-	-webkit-transform: scale(0.5);
-	-webkit-transition: 0.15s all ease;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.55);	
 }
 
 .hero {
