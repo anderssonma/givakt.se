@@ -27,7 +27,7 @@ body {
 	top: -20px;
 	right: -20px;
 	left: -20px;
-	bottom: 20px;
+	bottom: -10px;
 	z-index: 10;
 	border-radius: 5px;
 	font-size: 16px;
