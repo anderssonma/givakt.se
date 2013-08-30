@@ -52,7 +52,7 @@ body {
   -webkit-transition: 0.5s all;
 }
 .right-menu.closed {
-  -webkit-transform: translateX(250px);
+  -webkit-transform: translateX(300px);
   opacity: 0;
 }
 .right-menu li {

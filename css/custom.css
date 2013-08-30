@@ -20,6 +20,11 @@ body {
 }
 .work-process .flat-icon {
 	background: #9AB5bc;
+	font-size: 14px;
+	padding: 25px;
+}
+.work-process h4 {
+	margin-top: 16px;
 }
 .work-process .text-overlay {
 	position: absolute;
@@ -347,7 +352,7 @@ section {
 	line-height: 1.2;
 }
 .contact .grid ul {
-	padding-top: 5em;
+	padding-top: 3.5em;
 }
 .map img {
 	width: 100%;
@@ -773,7 +778,7 @@ h4.contact {
 	-webkit-transition: 0.5s color;
 }
 .footer .icons-ul li:hover i {
-	color: #EA7862;
+	color: #888;
 }
 
 .tilted {
