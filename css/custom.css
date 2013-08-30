@@ -7,6 +7,7 @@ body {
 .button-group {
 	margin: 0 0 3em 0;
 }
+
 .flat-icon {
 	padding: 15px 16px;
 	display: inline-block;
@@ -335,6 +336,9 @@ section {
 
 /* ______CONTACT_______ */
 
+.contact-section {
+	padding-top: 200px !important;
+}
 .contact {
 	padding-top: 0;
 }
@@ -347,7 +351,7 @@ section {
 	line-height: 1.2;
 }
 .contact .grid ul {
-	padding-top: 5em;
+	padding-top: 3em;
 }
 .map img {
 	width: 100%;
@@ -355,6 +359,7 @@ section {
 }
 .map-container {
 	padding-top: .2em;
+	padding-bottom: 0;
 }
 .map {
 	padding: 0;
