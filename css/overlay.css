@@ -68,13 +68,31 @@ body.noscroll .contain-to-grid .top-bar {
 	color: #3C4042;
 	text-align: center;
 	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
 	-webkit-transition: 0.25s -webkit-transform, 0.25s color 0.25s;
+	-moz-transition: 0.25s -moz-transform, 0.25s color 0.25s;
+	-o-transition: 0.25s -o-transform, 0.25s color 0.25s;
+	-ms-transition: 0.25s -ms-transform, 0.25s color 0.25s;
+	transition: 0.25s transform, 0.25s color 0.25s;
+	
 }
 .project-controls .nav-project:hover {
 	cursor: pointer;
 	-webkit-transform: scale(3);
+	-moz-transform: scale(3);
+	-o-transform: scale(3);
+	-ms-transform: scale(3);
+	transform: scale(3);
 	color: #FFF;
 	-webkit-transition: 0.25s -webkit-transform 0.25s, 0.25s color;
+	-moz-transition: 0.25s -moz-transform 0.25s, 0.25s color;
+	-o-transition: 0.25s -o-transform 0.25s, 0.25s color;
+	-ms-transition: 0.25s -ms-transform 0.25s, 0.25s color;
+	transition: 0.25s transform 0.25s, 0.25s color;
+	
 }
 .nav-project .nav-innerbg {
 	display: block;
@@ -87,6 +105,10 @@ body.noscroll .contain-to-grid .top-bar {
 	background-size: 100% 100%;
 	opacity: 0;
 	-webkit-transition: 0.25s all;
+	-moz-transition: 0.25s all;
+	-o-transition: 0.25s all;
+	-ms-transition: 0.25s all;
+	transition: 0.25s all;
 	border-radius: 25px;
 	color: #FFF;
 	font-weight: bold;
@@ -98,6 +120,10 @@ body.noscroll .contain-to-grid .top-bar {
 .nav-project:hover .nav-innerbg {
 	opacity: 1;
 	-webkit-transition: 0.25s all 0.25s;
+	-moz-transition: 0.25s all 0.25s;
+	-o-transition: 0.25s all 0.25s;
+	-ms-transition: 0.25s all 0.25s;
+	transition: 0.25s all 0.25s;
 }
 
 .project-controls .next-project {

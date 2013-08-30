@@ -55,14 +55,32 @@ body {
 	color: #FFF;
 	opacity: 0;
 	-webkit-transition: 0.3s all;
+	-moz-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	-ms-transition: 0.3s all;
+	transition: 0.3s all;
 	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	
 }
 .work-process .large-3:hover .text-overlay {
 	opacity: 1;
 	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	
 }
 .work-process .large-3:hover .flat-icon {
 	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
 }
 .work-process .large-3:hover > h4 {
 	opacity: 0;
@@ -84,13 +102,14 @@ body {
 	color: #868686;
 }
 .icon-Kontor_2 {
-	font-size: 7em;
-	color: #868686;
-	opacity: 0;
 	position: absolute;
 	opacity: 0;
 	bottom:20px;
 	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
 	left: 50%;
 	margin-left: -56px;
 
@@ -101,6 +120,11 @@ body {
 }
 .kontor:hover .icon-Kontor_1:before {
 	-webkit-animation: shake 0.5s 0.4s infinite linear;
+	-moz-animation: shake 0.5s 0.4s infinite linear;
+	-ms-animation: shake 0.5s 0.4s infinite linear;
+	-o-animation: shake 0.5s 0.4s infinite linear;
+	animation: shake 0.5s 0.4s infinite linear;
+	
 }
 .icon-Analys, .icon-Strategi, .icon-Ideer, .icon-Kommunikation, .icon-Design, .icon-Webb {
 	font-size: 7em !important;
@@ -113,7 +137,10 @@ body {
 .cl-effect-13 a {
 	-webkit-transition: color 0.3s;
 	-moz-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	-ms-transition: color 0.3s;
 	transition: color 0.3s;
+	
 }
 
 .cl-effect-13 a::before {
@@ -229,6 +256,7 @@ button, .button {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
+
 }
 button, .button.black {
 	background-color: #3e3e3e;
@@ -277,11 +305,14 @@ button, .button.transparent.black {
   position: absolute;
   left: 50%;
   top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
 	color: #fff;
 	text-align: center;
 	width: 80%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 .h-center h1, .h-center h2 {
 	color: #fff;
@@ -504,12 +535,22 @@ section {
 	height: 60px;
 	display: inline-block;
 	-webkit-transition: 0.5s background;
+	-moz-transition: 0.5s background;
+	-o-transition: 0.5s background;
+	-ms-transition: 0.5s background;
+	transition: 0.5s background;
+	
 }
 .circle-alt-2:hover {
 	background: #FFF;
 }
 .circle-alt-2 .icon-light {
 	-webkit-transition: 0.5s color;
+	-moz-transition: 0.5s color;
+	-o-transition: 0.5s color;
+	-ms-transition: 0.5s color;
+	transition: 0.5s color;
+	
 }
 .circle-alt-2:hover .icon-light {
 	color: #3C4042;
@@ -794,6 +835,10 @@ h4.contact {
 }
 .footer .icons-ul li i {
 	-webkit-transition: 0.5s color;
+	-moz-transition: 0.5s color;
+	-o-transition: 0.5s color;
+	-ms-transition: 0.5s color;
+	transition: 0.5s color;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -827,9 +872,11 @@ h4.contact {
 	.work-process .large-1 {
 		width: 100%;
 		margin-top: 0;
-		transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
 		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 	.footer {
 		height: auto;
@@ -965,12 +1012,16 @@ figure .hi-icon {
 .hi-icon:hover:after {
 	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
 	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+	-ms-animation: sonarEffect 1.3s ease-out 75ms;
+	-o-animation: sonarEffect 1.3s ease-out 75ms;
 	animation: sonarEffect 1.3s ease-out 75ms;
 }
 
 figure .hi-icon:hover:after {
 	-webkit-animation: sonarEffectAlt 1.3s ease-out 75ms;
 	-moz-animation: sonarEffectAlt 1.3s ease-out 75ms;
+	-ms-animation: sonarEffectAlt 1.3s ease-out 75ms;
+	-o-animation: sonarEffectAlt 1.3s ease-out 75ms;
 	animation: sonarEffectAlt 1.3s ease-out 75ms;
 }
 
@@ -1021,6 +1072,125 @@ figure .hi-icon:hover:after {
 	100% {
 		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
 		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+		-moz-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes sonarEffectAlt {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+		-moz-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+		-ms-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes sonarEffectAlt {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+		-ms-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+		-o-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes sonarEffectAlt {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+		-o-transform: scale(1.5);
+		opacity: 0;
+	}
+
+@keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3C4042, 0 0 0 10px rgba(255,255,255,0.5);
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@keyframes sonarEffectAlt {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #E7735B, 0 0 0 10px rgba(255,255,255,0.5);
+		ransform: scale(1.5);
 		opacity: 0;
 	}
 }
