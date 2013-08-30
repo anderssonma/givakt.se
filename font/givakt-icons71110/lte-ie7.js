@@ -30,7 +30,9 @@ window.onload = function() {
 			'icon-Design' : '&#xe005;',
 			'icon-Analys' : '&#xe007;',
 			'icon-citat_2' : '&#xe017;',
-			'icon-citat_1' : '&#xe018;'
+			'icon-citat_1' : '&#xe018;',
+			'icon-iconmonstr-tablet-icon' : '&#xe019;',
+			'icon-Computer-2' : '&#xe01a;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

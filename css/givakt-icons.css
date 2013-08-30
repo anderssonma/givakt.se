@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'givakt-icons';
-	src:url('../font/givakt-icons.eot');
-	src:url('../font/givakt-icons.eot?#iefix') format('embedded-opentype'),
-		url('../font/givakt-icons.woff') format('woff'),
-		url('../font/givakt-icons.ttf') format('truetype'),
-		url('../font/givakt-icons.svg#givakt-icons') format('svg');
+	src:url('fonts/givakt-icons.eot');
+	src:url('fonts/givakt-icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/givakt-icons.woff') format('woff'),
+		url('fonts/givakt-icons.ttf') format('truetype'),
+		url('fonts/givakt-icons.svg#givakt-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Forsta, .icon-Forandra, .icon-prickar, .icon-Pratbubbla_2, .icon-Pratbubbla_1, .icon-Person_2, .icon-Person_1, .icon-Mouse, .icon-Kontor_2, .icon-Kontor_1, .icon-Dokument_3, .icon-Dokument_2, .icon-Dokument_1, .icon-Computer, .icon-bubbla, .icon-mustasch, .icon-Formulera, .icon-Design, .icon-Analys, .icon-citat_2, .icon-citat_1 {
+.icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Forsta, .icon-Forandra, .icon-prickar, .icon-Pratbubbla_2, .icon-Pratbubbla_1, .icon-Person_2, .icon-Person_1, .icon-Mouse, .icon-Kontor_2, .icon-Kontor_1, .icon-Dokument_3, .icon-Dokument_2, .icon-Dokument_1, .icon-Computer, .icon-bubbla, .icon-mustasch, .icon-Formulera, .icon-Design, .icon-Analys, .icon-citat_2, .icon-citat_1, .icon-iconmonstr-tablet-icon, .icon-Computer-2 {
 	font-family: 'givakt-icons';
 	speak: none;
 	font-style: normal;
@@ -112,4 +112,10 @@ you can use the generic selector below, but it's slower:
 }
 .icon-citat_1:before {
 	content: "\e018";
+}
+.icon-iconmonstr-tablet-icon:before {
+	content: "\e019";
+}
+.icon-Computer-2:before {
+	content: "\e01a";
 }
