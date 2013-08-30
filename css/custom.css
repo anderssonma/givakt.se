@@ -275,17 +275,17 @@ section {
 	left: 20%;
 }
 .quote .orbit-slides-container li h2:before {
-	content: "\F10D";
+	content: "\e018";
 	position: absolute;
 	top: 0;
-	font-family: FontAwesome;
+	font-family: givakt-icons;
 }
 .quote .orbit-slides-container li h2:after {
-	content: "\F10E";
+	content: "\e017";
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	font-family: FontAwesome;
+	font-family: givakt-icons;
 }
 .quote .orbit-slides-container li h2 {
 	margin-top: 40px;
@@ -687,7 +687,7 @@ section {
 }
 .work-process .large-1 {
 	width: 12.4%;
-	margin-top: 5em;
+	margin-top: 4.5em;
 }
 .work-process i {
 	color: #99b6be;

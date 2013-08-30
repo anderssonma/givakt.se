@@ -28,7 +28,9 @@ window.onload = function() {
 			'icon-mustasch' : '&#xe016;',
 			'icon-Formulera' : '&#xe000;',
 			'icon-Design' : '&#xe005;',
-			'icon-Analys' : '&#xe007;'
+			'icon-Analys' : '&#xe007;',
+			'icon-citat_2' : '&#xe017;',
+			'icon-citat_1' : '&#xe018;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
