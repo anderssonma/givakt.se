@@ -4,6 +4,9 @@ body {
 	overflow-x: hidden;
 	font-family: 'ProximaNova';
 }
+.button-group {
+	margin: 0 0 3em 0;
+}
 .flat-icon {
 	padding: 15px 16px;
 	display: inline-block;
@@ -52,7 +55,7 @@ body {
 	font-size: 7em !important;
 }
 .icon-Forsta, .icon-Formulera, .icon-Forandra  {
-	font-size: 12em;
+	font-size: 10em;
 	color:#d8e3e1;
 }
 /* Effect 13: three circles */
@@ -374,6 +377,10 @@ section {
  }
 
 /* ______BLOGG_______ */
+
+ .blogg-jobb-headline {
+ 	padding-bottom: 50px;
+ }
 
 .blogg:hover .icon-stack{
 	opacity: 1;
@@ -848,3 +855,8 @@ h4.contact {
 	background: rgba(0,0,0,0.25);
 }
 
+@media only screen and (max-width: 768px) {
+	h1 {
+		font-size: 2.75em !important;
+		}
+}

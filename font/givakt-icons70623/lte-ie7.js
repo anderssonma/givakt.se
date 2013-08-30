@@ -6,14 +6,11 @@ window.onload = function() {
 		el.innerHTML = '<span style="font-family: \'givakt-icons\'">' + entity + '</span>' + html;
 	}
 	var icons = {
-			'icon-Analys' : '&#xe000;',
 			'icon-Webb' : '&#xe001;',
 			'icon-Strategi' : '&#xe002;',
 			'icon-Kommunikation' : '&#xe003;',
 			'icon-Ideer' : '&#xe004;',
-			'icon-Design' : '&#xe005;',
 			'icon-Forsta' : '&#xe006;',
-			'icon-Formulera' : '&#xe007;',
 			'icon-Forandra' : '&#xe008;',
 			'icon-prickar' : '&#xe009;',
 			'icon-Pratbubbla_2' : '&#xe00a;',
@@ -28,7 +25,10 @@ window.onload = function() {
 			'icon-Dokument_1' : '&#xe013;',
 			'icon-Computer' : '&#xe014;',
 			'icon-bubbla' : '&#xe015;',
-			'icon-mustasch' : '&#xe016;'
+			'icon-mustasch' : '&#xe016;',
+			'icon-Formulera' : '&#xe000;',
+			'icon-Design' : '&#xe005;',
+			'icon-Analys' : '&#xe007;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
