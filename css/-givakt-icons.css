@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Forsta, .icon-Forandra, .icon-prickar, .icon-Pratbubbla_2, .icon-Pratbubbla_1, .icon-Person_2, .icon-Person_1, .icon-Mouse, .icon-Kontor_2, .icon-Kontor_1, .icon-Dokument_3, .icon-Dokument_2, .icon-Dokument_1, .icon-Computer, .icon-bubbla, .icon-mustasch, .icon-Formulera, .icon-Design, .icon-Analys {
+.icon-Webb, .icon-Strategi, .icon-Kommunikation, .icon-Ideer, .icon-Forsta, .icon-Forandra, .icon-prickar, .icon-Pratbubbla_2, .icon-Pratbubbla_1, .icon-Person_2, .icon-Person_1, .icon-Mouse, .icon-Kontor_2, .icon-Kontor_1, .icon-Dokument_3, .icon-Dokument_2, .icon-Dokument_1, .icon-Computer, .icon-bubbla, .icon-mustasch, .icon-Formulera, .icon-Design, .icon-Analys, .icon-citat_2, .icon-citat_1 {
 	font-family: 'givakt-icons';
 	speak: none;
 	font-style: normal;
@@ -106,4 +106,10 @@ you can use the generic selector below, but it's slower:
 }
 .icon-Analys:before {
 	content: "\e007";
+}
+.icon-citat_2:before {
+	content: "\e017";
+}
+.icon-citat_1:before {
+	content: "\e018";
 }
