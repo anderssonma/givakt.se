@@ -47,6 +47,11 @@ var prepareDiv = function() {
 	// PRELOAD IMAGES HERE
 	console.timeEnd('Load images');
 	var wrapper = pager.pageIn.selector;
+	if (pager.index === 0) {
+		$(wrapper + ' .project-channel').addClass('show');
+	} else {
+		$(wrapper + ' .project-channel').removeClass('show');
+	}
 	$(wrapper + ' h1').text(projects[pager.index].title);
 	$(wrapper + ' .h-center h3').html(projects[pager.index].subtitle);
 	$(wrapper + ' .large-6 h3').html(projects[pager.index].subsection);

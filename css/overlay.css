@@ -175,6 +175,12 @@ body.noscroll .contain-to-grid .top-bar {
 .project-page .h-center > h3 {
 	color: #FFF;
 }
+.project-page .project-channel {
+	display: none;
+}
+.project-page .project-channel.show {
+	display: inline-block;
+}
 
 .no-js body {
 	overflow: auto;
