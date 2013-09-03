@@ -29,7 +29,7 @@ var pager = {
 		this.animEndName = animEndEventNames[Modernizr.prefixed('animation')];
 		this.pageInView = false;
 		this.pageIn = $('.project-page-1');
-		this.pageOut =  $('.project-page-2');
+		this.pageOut = $('.project-page-2');
 		this.controls = $('.project-controls');
 		this.stage = $('.project-stage');
 		this.direction = 'next';
@@ -228,37 +228,37 @@ $(document).ready(function() {
 	var page2 = $('.project-page-2');
 
 	page1.on('scroll', function() {
-	  var treshold = window.innerHeight * 0.375;
-  	if (!controlsVisible && page1.scrollTop() > treshold) {
-  		$('.project-stage .icon-2x').addClass('show');
-  		controlsVisible = true;
-  	} else if (controlsVisible && page1.scrollTop() < treshold) {
-  		$('.project-stage .icon-2x').removeClass('show');
-  		controlsVisible = false;
-  	}
+		var treshold = window.innerHeight * 0.375;
+		if (!controlsVisible && page1.scrollTop() > treshold) {
+			$('.project-stage .icon-2x').addClass('show');
+			controlsVisible = true;
+		} else if (controlsVisible && page1.scrollTop() < treshold) {
+			$('.project-stage .icon-2x').removeClass('show');
+			controlsVisible = false;
+		}
 	});
 
 	page2.on('scroll', function() {
-	  var treshold = window.innerHeight * 0.375;
-  	if (!controlsVisible && page2.scrollTop() > treshold) {
-  		$('.project-stage .icon-2x').addClass('show');
-  		controlsVisible = true;
-  	} else if (controlsVisible && page2.scrollTop() < treshold) {
-  		$('.project-stage .icon-2x').removeClass('show');
-  		controlsVisible = false;
-  	}
+		var treshold = window.innerHeight * 0.375;
+		if (!controlsVisible && page2.scrollTop() > treshold) {
+			$('.project-stage .icon-2x').addClass('show');
+			controlsVisible = true;
+		} else if (controlsVisible && page2.scrollTop() < treshold) {
+			$('.project-stage .icon-2x').removeClass('show');
+			controlsVisible = false;
+		}
 	});
 
 	/*
 	$('.nav-direction').scrollspy({
-    min: $('.nav-direction').offset().top,
-    onEnter: function(element, position) {
-      $(".nav-direction").addClass('fixed');
-    },
-    onLeave: function(element, position) {
-      $(".nav-direction").removeClass('fixed');
-    }
-  });
+		min: $('.nav-direction').offset().top,
+		onEnter: function(element, position) {
+			$(".nav-direction").addClass('fixed');
+		},
+		onLeave: function(element, position) {
+			$(".nav-direction").removeClass('fixed');
+		}
+	});
 */
 
 });
