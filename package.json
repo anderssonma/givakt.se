@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "GivAkt's nya portfolio",
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
