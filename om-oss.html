@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/givakt-icons.css">
   <link rel="stylesheet" href="css/animation.css">
-  <script src="js/vendor/custom.modernizr.js"></script>
 </head>
 <body>
 
@@ -198,13 +197,16 @@
 </div>
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
-  <script src="js/foundation.min.js"></script>
-  <script src="js/flatshadow.min.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script src="js/vendor/flatshadow.min.js"></script>
   <script src="js/custom.js"></script>
  <!-- För prototyp -->
   
   <script>
+  $(document).ready(function() {
     $(document).foundation('orbit');
+  });
+    
   </script>
 </body>
 </html>
