@@ -12,11 +12,14 @@ $(document).ready(function(){
 		$('#nav-open-btn, #inner-wrap').removeClass('menu-open');
 		$('nav').removeClass('show');
 	});
-	$(".flat-icon").flatshadow({
+	if ($(".flat-icon").length > 0) {
+		$(".flat-icon").flatshadow({
 				angle: "SE",
 						fade: false,
 				boxShadow: false // Accept full 6 digit hex color (#000000)
-	});
+		});
+	}
+	
 
 	var isActive = false;
 	var $window = $(window);
