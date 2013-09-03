@@ -2,8 +2,13 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
-	font-family: 'ProximaNova';
 }
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: 'ProximaNova';
+	font-weight: normal;
+	color: #424242;
+}
+
 .backface {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -104,18 +109,20 @@ body {
 .icon-Kontor_2 {
 	position: absolute;
 	opacity: 0;
-	bottom:20px;
+	bottom: 20px;
+	font-size: 8em;
+	color: #868686;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	transition: all 0.5s;
 	left: 50%;
-	margin-left: -56px;
+	margin-left: -63px;
 
 }
 .kontor:hover .icon-Kontor_2 {
-	bottom: 125px;
+	bottom: 114px;
 	opacity: 1;
 }
 .kontor:hover .icon-Kontor_1:before {
@@ -207,7 +214,7 @@ h1 {
 	margin-bottom: 0;
 	line-height: 1em;
 }
-.f-light {
+.f-light, .f-light h2.subheader {
 	font-family: 'ProximaNovaLight' !important;	
 }
 .f-thin {
@@ -741,8 +748,7 @@ section {
 	transition: transform 0.3s, opacity 0.3s;
 }
 
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
+.cs-style-1 figure:hover figcaption {
 	opacity: 1;
 	-webkit-transform: translate(15px, 15px);
 	-moz-transform: translate(15px, 15px);
