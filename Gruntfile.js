@@ -1,17 +1,55 @@
+var LIVERELOAD_PORT = 35729;
+var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
+var mountFolder = function (connect, dir) {
+  console.log(connect.static(require('path').resolve(dir)));
+  return connect.static(require('path').resolve(dir));
+};
+
 module.exports = function(grunt) {
 
 	// Configuration goes here
   grunt.initConfig({
-  	
-  	pkg: grunt.file.readJSON('package.json'),
+  
+    pkg: grunt.file.readJSON('package.json'),
    
     watch: {
-      css: {
-        files: ['sass/**/*.scss'],
-        tasks: ['compass'],
+      sass: {
+        files: ['sass/*.scss'],
+        tasks: ['sass'],
+        options: {
+          spawn: false
+        }
+      },
+      livereload: {
+        files: ['css/**/*'],
         options: {
           spawn: false,
+          livereload: true
         }
+      }
+    },
+
+    connect: {
+      options: {
+        port: 9000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          middleware: function (connect) {
+            return [
+              lrSnippet,
+              mountFolder(connect, 'prototyp')
+            ];
+          }
+        }
+      }
+    }, 
+
+    open: {
+      server: {
+        url: 'http://localhost:9000'
       }
     },
 
@@ -21,6 +59,14 @@ module.exports = function(grunt) {
           sassDir: 'sass',
           cssDir: 'css'
           // noLineComments: true
+        }
+      }
+    },
+
+    sass: {
+      dist: {
+        files: {
+          'css/style.css': 'sass/style.scss'
         }
       }
     },
@@ -55,6 +101,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib');
 
   // Define your tasks here
-  grunt.registerTask('default', ['compass']);
+  grunt.registerTask('default', ['sass', 'watch']);
 
 };
