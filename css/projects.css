@@ -1,15 +1,10 @@
-/* line 3, ../sass/projects.scss */
 body.noscroll {
   overflow-y: hidden;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
-/* line 7, ../sass/projects.scss */
 body.noscroll .contain-to-grid .top-bar {
-  padding-right: 7px;
-}
+  padding-right: 7px; }
 
-/* line 11, ../sass/projects.scss */
 .project-stage {
   position: fixed;
   top: 0;
@@ -19,21 +14,17 @@ body.noscroll .contain-to-grid .top-bar {
   overflow-y: auto;
   overflow-x: hidden;
   display: none;
-  z-index: 20;
-}
-/* line 21, ../sass/projects.scss */
-.project-stage.active {
-  display: block;
-}
+  z-index: 20; }
+  .project-stage.active {
+    display: block; }
 
-/* line 26, ../sass/projects.scss */
 .progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
   height: 4px;
-  background-image: linear-gradient(to bottom right, #d38312, #a83279);
+  background-image: linear, to bottom right, #d38312, #a83279;
   opacity: 0.75;
   z-index: 20;
   border-radius: 0 1px 1px 0;
@@ -41,10 +32,8 @@ body.noscroll .contain-to-grid .top-bar {
   -moz-transition: width 0.1s ease-in;
   -o-transition: width 0.1s ease-in;
   -ms-transition: width 0.1s ease-in;
-  transition: width 0.1s ease-in;
-}
+  transition: width 0.1s ease-in; }
 
-/* line 43, ../sass/projects.scss */
 .project-controls {
   z-index: 10;
   position: relative;
@@ -53,124 +42,98 @@ body.noscroll .contain-to-grid .top-bar {
   -moz-transition: opacity 0.25s;
   -o-transition: opacity 0.25s;
   -ms-transition: opacity 0.25s;
-  transition: opacity 0.25s;
-}
-/* line 52, ../sass/projects.scss */
-.project-controls.active {
-  opacity: 1;
-}
-/* line 55, ../sass/projects.scss */
-.project-controls .nav-project {
-  position: fixed;
-  left: 50px;
-  top: 50%;
-  display: block;
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  font-size: 36px;
-  line-height: 40px;
-  background: rgba(255, 255, 255, 0.75);
-  z-index: 10;
-  color: #3C4042;
-  text-align: center;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.25s -webkit-transform, 0.25s color 0.25s;
-  -moz-transition: 0.25s -moz-transform, 0.25s color 0.25s;
-  -o-transition: 0.25s -o-transform, 0.25s color 0.25s;
-  -ms-transition: 0.25s -ms-transform, 0.25s color 0.25s;
-  transition: 0.25s transform, 0.25s color 0.25s;
-}
-/* line 79, ../sass/projects.scss */
-.project-controls .nav-project:hover {
-  cursor: pointer;
-  -webkit-transform: scale(3);
-  -moz-transform: scale(3);
-  -o-transform: scale(3);
-  -ms-transform: scale(3);
-  transform: scale(3);
-  color: #FFF;
-  -webkit-transition: 0.25s -webkit-transform 0.25s, 0.25s color;
-  -moz-transition: 0.25s -moz-transform 0.25s, 0.25s color;
-  -o-transition: 0.25s -o-transform 0.25s, 0.25s color;
-  -ms-transition: 0.25s -ms-transform 0.25s, 0.25s color;
-  transition: 0.25s transform 0.25s, 0.25s color;
-}
-/* line 94, ../sass/projects.scss */
-.project-controls .nav-innerbg {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 40px;
-  height: 40px;
-  background: url("../img/img_prev.jpg") no-repeat;
-  background-size: 100% 100%;
-  opacity: 0;
-  -webkit-transition: 0.25s all;
-  -moz-transition: 0.25s all;
-  -o-transition: 0.25s all;
-  -ms-transition: 0.25s all;
-  transition: 0.25s all;
-  border-radius: 25px;
-  color: #FFF;
-  font-weight: bold;
-}
-/* line 113, ../sass/projects.scss */
-.project-controls.next-project .nav-innerbg {
-  background: url("../img/img_next.jpg") no-repeat;
-  background-size: 100% 100%;
-}
+  transition: opacity 0.25s; }
+  .project-controls.active {
+    opacity: 1; }
+  .project-controls .nav-project {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 36px;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 10;
+    color: #3C4042;
+    text-align: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.25s -webkit-transform, 0.25s color 0.25s;
+    -moz-transition: 0.25s -moz-transform, 0.25s color 0.25s;
+    -o-transition: 0.25s -o-transform, 0.25s color 0.25s;
+    -ms-transition: 0.25s -ms-transform, 0.25s color 0.25s;
+    transition: 0.25s transform, 0.25s color 0.25s; }
+    .project-controls .nav-project:hover {
+      cursor: pointer;
+      -webkit-transform: scale(3);
+      -moz-transform: scale(3);
+      -o-transform: scale(3);
+      -ms-transform: scale(3);
+      transform: scale(3);
+      color: #FFF;
+      -webkit-transition: 0.25s -webkit-transform 0.25s, 0.25s color;
+      -moz-transition: 0.25s -moz-transform 0.25s, 0.25s color;
+      -o-transition: 0.25s -o-transform 0.25s, 0.25s color;
+      -ms-transition: 0.25s -ms-transform 0.25s, 0.25s color;
+      transition: 0.25s transform 0.25s, 0.25s color; }
+  .project-controls .nav-innerbg {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/img_prev.jpg") no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+    -webkit-transition: 0.25s all;
+    -moz-transition: 0.25s all;
+    -o-transition: 0.25s all;
+    -ms-transition: 0.25s all;
+    transition: 0.25s all;
+    border-radius: 25px;
+    color: #FFF;
+    font-weight: bold; }
+  .project-controls.next-project .nav-innerbg {
+    background: url("../img/img_next.jpg") no-repeat;
+    background-size: 100% 100%; }
 
-/* line 120, ../sass/projects.scss */
 .nav-project:hover .nav-innerbg {
   opacity: 1;
   -webkit-transition: 0.25s all 0.25s;
   -moz-transition: 0.25s all 0.25s;
   -o-transition: 0.25s all 0.25s;
   -ms-transition: 0.25s all 0.25s;
-  transition: 0.25s all 0.25s;
-}
+  transition: 0.25s all 0.25s; }
 
-/* line 129, ../sass/projects.scss */
 .project-controls .next-project {
   left: auto;
   right: 50px;
-  text-indent: 1px;
-}
+  text-indent: 1px; }
 
-/* line 134, ../sass/projects.scss */
 .project-controls .prev-project {
-  text-indent: -2px;
-}
+  text-indent: -2px; }
 
-/* line 137, ../sass/projects.scss */
 .project-controls .exit-project {
   top: 50px;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
-/* line 141, ../sass/projects.scss */
 .project-controls .exit-project:hover {
   -webkit-transform: rotate(180deg);
-  color: #3C4042;
-}
+  color: #3C4042; }
 
-/* line 145, ../sass/projects.scss */
 .project-controls .icon-2x {
-  opacity: 0;
-}
+  opacity: 0; }
 
-/* line 148, ../sass/projects.scss */
 .project-controls .icon-2x.show {
-  opacity: 1;
-}
+  opacity: 1; }
 
-/* line 152, ../sass/projects.scss */
 .project-page {
   background: #FFF;
   overflow: hidden;
@@ -187,200 +150,127 @@ body.noscroll .contain-to-grid .top-bar {
   transform: translate3d(0, 0, 0);
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+  transform-style: preserve-3d; }
 
-/* line 171, ../sass/projects.scss */
 .project-page.scroll {
-  overflow-y: auto;
-}
+  overflow-y: auto; }
 
-/* line 176, ../sass/projects.scss */
 .project-current,
 .no-js .project-page {
   height: auto;
   visibility: visible;
   z-index: 1;
-  left: 0;
-}
+  left: 0; }
 
-/* line 183, ../sass/projects.scss */
 .project-page img {
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 186, ../sass/projects.scss */
 .project-page .img-0 {
-  float: left;
-}
+  float: left; }
 
-/* line 189, ../sass/projects.scss */
 .project-page .blogg-top-img {
   padding: 0;
-  float: none;
-}
+  float: none; }
 
-/* line 193, ../sass/projects.scss */
 .project-page .image-full {
   width: 101%;
   height: 80%;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-}
+  background-size: cover; }
 
-/* line 201, ../sass/projects.scss */
 .project-page .h-center > h3 {
-  color: #FFF;
-}
+  color: #FFF; }
 
-/* line 204, ../sass/projects.scss */
 .project-page .project-channel {
-  display: none;
-}
+  display: none; }
 
-/* line 207, ../sass/projects.scss */
 .project-page .project-channel.show {
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 211, ../sass/projects.scss */
 .no-js body {
-  overflow: auto;
-}
+  overflow: auto; }
 
-/* line 215, ../sass/projects.scss */
 .project-page .inline-list {
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 218, ../sass/projects.scss */
 .project-page .large-8 {
-  margin: 40px auto;
-}
+  margin: 40px auto; }
 
-/* line 221, ../sass/projects.scss */
 .project-page .large-6 {
   margin-top: 80px;
-  margin-bottom: 80px;
-}
+  margin-bottom: 80px; }
 
-/* line 225, ../sass/projects.scss */
 .project-page .h-center {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 /* PROJECT TRANSITIONS */
 /* =================== */
-/* line 233, ../sass/projects.scss */
 .project-moveToLeft {
   -webkit-animation: moveToLeft .6s ease both;
   -moz-animation: moveToLeft .6s ease both;
-  animation: moveToLeft .6s ease both;
-}
+  animation: moveToLeft .6s ease both; }
 
-/* line 239, ../sass/projects.scss */
 .project-moveFromLeft {
   -webkit-animation: moveFromLeft .6s ease both;
   -moz-animation: moveFromLeft .6s ease both;
-  animation: moveFromLeft .6s ease both;
-}
+  animation: moveFromLeft .6s ease both; }
 
-/* line 245, ../sass/projects.scss */
 .project-moveToRight {
   -webkit-animation: moveToRight .6s ease both;
   -moz-animation: moveToRight .6s ease both;
-  animation: moveToRight .6s ease both;
-}
+  animation: moveToRight .6s ease both; }
 
-/* line 251, ../sass/projects.scss */
 .project-moveFromRight {
   -webkit-animation: moveFromRight .6s ease both;
   -moz-animation: moveFromRight .6s ease both;
-  animation: moveFromRight .6s ease both;
-}
+  animation: moveFromRight .6s ease both; }
 
 @-webkit-keyframes moveToLeft {
-  /* line 258, ../sass/projects.scss */
   to {
-    -webkit-transform: translateX(-100%);
-  }
-}
+    -webkit-transform: translateX(-100%); } }
 
 @-moz-keyframes moveToLeft {
-  /* line 261, ../sass/projects.scss */
   to {
-    -moz-transform: translateX(-100%);
-  }
-}
+    -moz-transform: translateX(-100%); } }
 
 @keyframes moveToLeft {
-  /* line 264, ../sass/projects.scss */
   to {
-    transform: translateX(-100%);
-  }
-}
+    transform: translateX(-100%); } }
 
 @-webkit-keyframes moveFromLeft {
-  /* line 268, ../sass/projects.scss */
   from {
-    -webkit-transform: translateX(-100%);
-  }
-}
+    -webkit-transform: translateX(-100%); } }
 
 @-moz-keyframes moveFromLeft {
-  /* line 271, ../sass/projects.scss */
   from {
-    -moz-transform: translateX(-100%);
-  }
-}
+    -moz-transform: translateX(-100%); } }
 
 @keyframes moveFromLeft {
-  /* line 274, ../sass/projects.scss */
   from {
-    transform: translateX(-100%);
-  }
-}
+    transform: translateX(-100%); } }
 
 @-webkit-keyframes moveToRight {
-  /* line 278, ../sass/projects.scss */
   to {
-    -webkit-transform: translateX(100%);
-  }
-}
+    -webkit-transform: translateX(100%); } }
 
 @-moz-keyframes moveToRight {
-  /* line 281, ../sass/projects.scss */
   to {
-    -moz-transform: translateX(100%);
-  }
-}
+    -moz-transform: translateX(100%); } }
 
 @keyframes moveToRight {
-  /* line 284, ../sass/projects.scss */
   to {
-    transform: translateX(100%);
-  }
-}
+    transform: translateX(100%); } }
 
 @-webkit-keyframes moveFromRight {
-  /* line 288, ../sass/projects.scss */
   from {
-    -webkit-transform: translateX(100%);
-  }
-}
+    -webkit-transform: translateX(100%); } }
 
 @-moz-keyframes moveFromRight {
-  /* line 291, ../sass/projects.scss */
   from {
-    -moz-transform: translateX(100%);
-  }
-}
+    -moz-transform: translateX(100%); } }
 
 @keyframes moveFromRight {
-  /* line 294, ../sass/projects.scss */
   from {
-    transform: translateX(100%);
-  }
-}
+    transform: translateX(100%); } }

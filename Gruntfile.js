@@ -1,10 +1,3 @@
-var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
-var mountFolder = function (connect, dir) {
-  console.log(connect.static(require('path').resolve(dir)));
-  return connect.static(require('path').resolve(dir));
-};
-
 module.exports = function(grunt) {
 
 	// Configuration goes here
@@ -21,7 +14,7 @@ module.exports = function(grunt) {
         }
       },
       livereload: {
-        files: ['css/**/*'],
+        files: ['css/*.css'],
         options: {
           spawn: false,
           livereload: true
@@ -29,51 +22,18 @@ module.exports = function(grunt) {
       }
     },
 
-    connect: {
-      options: {
-        port: 9000,
-        // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          middleware: function (connect) {
-            return [
-              lrSnippet,
-              mountFolder(connect, 'prototyp')
-            ];
-          }
-        }
-      }
-    }, 
-
-    open: {
-      server: {
-        url: 'http://localhost:9000'
-      }
-    },
-
-    compass: {
-      dist: {
-        options: {
-          sassDir: 'sass',
-          cssDir: 'css'
-          // noLineComments: true
-        }
-      }
-    },
-
     sass: {
       dist: {
         files: {
-          'css/style.css': 'sass/style.scss'
+          'css/style.css': 'sass/style.scss',
+          'css/projects.css': 'sass/projects.scss'
         }
       }
     },
 
     // Some typical JSHint options and globals
     jshint: {
-    	files: ['js/projects.js', 'js/custom.js'],
+    	files: ['js/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -102,5 +62,5 @@ module.exports = function(grunt) {
 
   // Define your tasks here
   grunt.registerTask('default', ['sass', 'watch']);
-
+  grunt.registerTask('hint', ['jshint']);
 };
