@@ -5,7 +5,27 @@ module.exports = function(grunt) {
   	
   	pkg: grunt.file.readJSON('package.json'),
    
-  	// Some typical JSHint options and globals
+    watch: {
+      css: {
+        files: ['sass/**/*.scss'],
+        tasks: ['compass'],
+        options: {
+          spawn: false,
+        }
+      }
+    },
+
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'sass',
+          cssDir: 'css'
+          // noLineComments: true
+        }
+      }
+    },
+
+    // Some typical JSHint options and globals
     jshint: {
     	files: ['js/projects.js', 'js/custom.js'],
       options: {
@@ -27,7 +47,7 @@ module.exports = function(grunt) {
         	$: true
       	}
       }
-    },
+    }
 
   });
 
@@ -35,6 +55,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib');
 
   // Define your tasks here
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['compass']);
 
 };
