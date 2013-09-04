@@ -1,5 +1,16 @@
+@import 'bourbon/bourbon';
+
 $red: #FF0000;
 
 body {
 	background: $red;
+}
+
+@include keyframes(fadeIn) {
+  from {
+    @include transform(scale(0));
+  }
+  to {
+    @include transform(scale(1));
+  }
 }
