@@ -89,10 +89,10 @@ module.exports = function(grunt) {
 
     csslint: {
       src: ['dist/css/*.css']
-    }
+    },
 
     clean: {
-      build: 'dist'
+      build: 'dist/*'
     }
 
   });
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean',
+    'clean'
     'jshint',
     'autoprefixer', 
     'uglify', 
