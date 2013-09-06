@@ -85,6 +85,14 @@ module.exports = function(grunt) {
         	$: true
       	}
       }
+    },
+
+    csslint: {
+      src: ['dist/css/*.css']
+    }
+
+    clean: {
+      build: 'dist'
     }
 
   });
@@ -92,7 +100,9 @@ module.exports = function(grunt) {
   // Load plugins here
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
@@ -101,10 +111,12 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
 
   grunt.registerTask('lint', [
-    'jshint'
+    'csslint'
   ]);
 
   grunt.registerTask('build', [
+    'clean',
+    'jshint',
     'autoprefixer', 
     'uglify', 
     'imagemin'
