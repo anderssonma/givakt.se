@@ -5,6 +5,15 @@ module.exports = function(grunt) {
   
     pkg: grunt.file.readJSON('package.json'),
    
+    sass: {
+      dist: {
+        files: {
+          'css/style.css': 'sass/style.scss',
+          'css/projects.css': 'sass/projects.scss'
+        }
+      }
+    },
+
     watch: {
       sass: {
         files: ['sass/*.scss'],
@@ -16,17 +25,7 @@ module.exports = function(grunt) {
       livereload: {
         files: ['css/*.css'],
         options: {
-          spawn: false,
           livereload: true
-        }
-      }
-    },
-
-    sass: {
-      dist: {
-        files: {
-          'css/style.css': 'sass/style.scss',
-          'css/projects.css': 'sass/projects.scss'
         }
       }
     },
@@ -58,9 +57,10 @@ module.exports = function(grunt) {
   });
 
   // Load plugins here
-  grunt.loadNpmTasks('grunt-contrib');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Define your tasks here
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('default', ['watch']);
   grunt.registerTask('hint', ['jshint']);
 };
