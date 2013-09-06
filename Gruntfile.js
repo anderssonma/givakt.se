@@ -30,7 +30,15 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      build: {
+        src: 'css/style.css',
+        dest: 'dist/css/style.css'
+      }
+    }
+
     // Some typical JSHint options and globals
+    /*
     jshint: {
     	files: ['js/*.js'],
       options: {
@@ -53,14 +61,16 @@ module.exports = function(grunt) {
       	}
       }
     }
+    */
 
   });
 
   // Load plugins here
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Define your tasks here
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('hint', ['jshint']);
+  grunt.registerTask('build', ['autoprefixer']);
 };
