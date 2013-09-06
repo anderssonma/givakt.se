@@ -61,10 +61,9 @@ module.exports = function(grunt) {
           dest: 'dist/img'               // Destination path prefix
         }]
       }
-    }
+    },
 
     // Some typical JSHint options and globals
-    /*
     jshint: {
     	files: ['js/*.js'],
       options: {
@@ -87,18 +86,28 @@ module.exports = function(grunt) {
       	}
       }
     }
-    */
 
   });
 
   // Load plugins here
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Define your tasks here
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['autoprefixer', 'uglify', 'imagemin']);
+
+  grunt.registerTask('lint', [
+    'jshint'
+  ]);
+
+  grunt.registerTask('build', [
+    'autoprefixer', 
+    'uglify', 
+    'imagemin'
+  ]);
+
 };
