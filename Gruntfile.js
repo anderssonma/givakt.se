@@ -93,6 +93,20 @@ module.exports = function(grunt) {
 
     clean: {
       build: 'dist/*'
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          dest: 'dist/',
+          src: [
+            'font/*',
+            'js/vendor/*',
+            'css/vendor/*'
+          ]
+        }]
+      }
     }
 
   });
@@ -106,6 +120,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Define your tasks here
   grunt.registerTask('default', ['watch']);
@@ -115,11 +130,12 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean'
+    'clean',
     'jshint',
     'autoprefixer', 
     'uglify', 
-    'imagemin'
+    'imagemin',
+    'copy'
   ]);
 
 };
