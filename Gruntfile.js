@@ -37,13 +37,28 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      options: {
+        mangle: {
+          except: ['$', 'google']   // Variable names that shouldn't be compressed
+        },
+        report: 'min',
+        preserveComments: 'false'
+      },
+      build: {
+        files: {
+          'dist/js/scripts.min.js': ['js/custom.js', 'js/projects.js']
+        }
+      }
+    },
+
     imagemin: {
       build: {
         files: [{
           expand: true,                  // Enable dynamic expansion
           cwd: 'img/',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'dist/img'                  // Destination path prefix
+          dest: 'dist/img'               // Destination path prefix
         }]
       }
     }
@@ -79,10 +94,11 @@ module.exports = function(grunt) {
   // Load plugins here
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Define your tasks here
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['autoprefixer', 'imagemin']);
+  grunt.registerTask('build', ['autoprefixer', 'uglify', 'imagemin']);
 };
