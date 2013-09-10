@@ -101,6 +101,7 @@ module.exports = function(grunt) {
           expand: true,
           dest: 'dist/',
           src: [
+            '*.html',
             'font/*',
             'js/vendor/*',
             'css/vendor/*'
