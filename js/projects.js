@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 
 'use strict';
 
@@ -298,4 +298,4 @@ var projects = [
 	},
 ];
 
-}());
+})(jQuery);
